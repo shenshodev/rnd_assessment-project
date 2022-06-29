@@ -1,7 +1,9 @@
 ## R&D Assessment Project
 
-This project was created to do the R&D Assessment 
-You can clone the project on your computer
+This project was created to do the R&D Assessment.
+
+You can clone the project on your computer.
+
 Requirements:
 - NodeJS
 
