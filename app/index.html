@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <!-- Bootstrap Theme -->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css" />
+    <!-- Global -->
+    <link rel="stylesheet" type="text/css" href="./css/app.css">
+    <!-- Handlebars -->
+    <script type="text/javascript" src="./js/handlebars-v4.7.7.js"></script>
+
+    <title>Royal Enfield</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <nav class="navbar header__nav" role="navigation">
+                <div class="navbar-header header__menu">
+                    <button type="button" class="navbar-toggle header__menu--toggle" data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="header__logo" href="#">
+                        <img src="./imgs/dealer-logo.svg" class="header__logo--img" alt="Royal Enfield">
+                    </a>
+                    <h3 class="header__slogan">Duluth Motorcycles</h3>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse header__nav--collapse">
+                    <ul class="nav nav__list">
+                        <li class="nav__item"><a href="#" class="nav__link  "> New Inventory </a></li>
+                        <li class="nav__item"><a href="#" class="nav__link  "> Pre-Owned Inventory </a></li>
+                        <li class="nav__item"><a href="#" class="nav__link  "> Promotions </a></li>
+                        <li class="nav__item"><a href="#" class="nav__link  "> Accessories </a></li>
+                        <li class="nav__item"><a href="#" class="nav__link nav__link--button "> Contact Us </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="page__container">
+            <div class="hero__logo">
+                <span class="hero__logo--red-line"></span>
+                <img src="./imgs/dealer-logo-white.svg" class="hero__logo--img" alt="Royal Enfield">
+            </div>
+            <h1 class="hero__title">Pure <span>motorcycling</span> since 1901</h1>
+            <div class="hero__buttons">
+                <a href="#" title="Discover the Lineup" class="page__button">Discover the Lineup</a>
+                <a href="#" title="View Inventory" class="page__button">View Inventory</a>
+            </div>
+            <div class="hero__scroll-container">
+                <a href="#ctas-section" class="hero__scroll-link"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="ctas" id="ctas-section">
+        <div class="ctas__list">
+            <a href="" class="ctas__link">
+                <h3 class="ctas__text">
+                    <span class="ctas__text--block"></span>
+                    New Inventory
+                </h3>
+            </a>
+            <a href="" class="ctas__link">
+                <h3 class="ctas__text">
+                    <span class="ctas__text--block">Genuine Motorcycle</span>
+                    Accessories
+                </h3>
+            </a>
+        </div>
+    </section>
+    <section class="page__section video">
+        <div class="page__container">
+            <h3 class="page__title">Royal Enfield Lifestyle</h3>
+
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4x9ktxw4Y8s?rel=0"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <section class="page__section promotions">
+        <div class="page__container">
+            <h3 class="page__title">Promotions</h3>
+            <div class="promotions__slider">
+                <div class="promotions__slide-item">
+                    <img src="./imgs/slide-promotions-01.jpg" class="promotions__img">
+                </div>
+                <div class="promotions__slide-item">
+                    <img src="./imgs/slide-promotions-02.jpg" class="promotions__img">
+                </div>
+                <div class="promotions__slide-item">
+                    <img src="./imgs/slide-promotions-03.jpg" class="promotions__img">
+                </div>
+                <div class="promotions__slide-item">
+                    <img src="./imgs/slide-promotions-04.jpg" class="promotions__img">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lineup">
+        <div class="lineup__container">
+            <h3 class="page__title">The Royal Enfield Lineup</h3>
+
+            <div class="logos-slider to-navigator">
+                <div class="logos-slider__item">
+                    <img src="./imgs/slide-logo-01.png" class="logos-slider__img">
+                </div>
+                <div class="logos-slider__item">
+                    <img src="./imgs/slide-logo-02.png" class="logos-slider__img">
+                </div>
+                <div class="logos-slider__item">
+                    <img src="./imgs/slide-logo-03.png" class="logos-slider__img">
+                </div>
+                <div class="logos-slider__item">
+                    <img src="./imgs/slide-logo-04.png" class="logos-slider__img">
+                </div>
+            </div>
+
+            <div class="motorcycles-slider to-navigator">
+                <div class="motorcycles-slider__item">
+                    <img src="./imgs/slide-motorcycles-01.png" class="motorcycles-slider__img">
+                </div>
+                <div class="motorcycles-slider__item">
+                    <img src="./imgs/slide-motorcycles-02.png" class="motorcycles-slider__img">
+                </div>
+                <div class="motorcycles-slider__item">
+                    <img src="./imgs/slide-motorcycles-03.png" class="motorcycles-slider__img">
+                </div>
+                <div class="motorcycles-slider__item">
+                    <img src="./imgs/slide-motorcycles-04.png" class="motorcycles-slider__img">
+                </div>
+            </div>
+            <div class="lineup__button">
+                <a href="" class="page__button">Discover</a>
+            </div>
+
+            <div class="youtube-slider to-navigator">
+                <div class="youtube-slider__item">
+                    <div class="youtube-slider__preview youtube-slider__preview--01">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </div>
+                    <div class="youtube-slider__content">
+                        <h4 class="youtube-slider__model">Int650</h4>
+                        <h3 class="youtube-slider__title">Devil Is In The Details</h3>
+                        <p class="youtube-slider__text">
+                            The quintessential modern classic roadster - that's a blast to ride on twisty back roads,
+                            highways, or the urban jungle, with equal ease and grace, for novices and experienced riders
+                            alike.
+                        </p>
+                        <a href="" class="youtube-slider__link"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                            See it in action</a>
+                    </div>
+                </div>
+                <div class="youtube-slider__item">
+                    <div class="youtube-slider__preview youtube-slider__preview--02">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </div>
+                    <div class="youtube-slider__content">
+                        <h4 class="youtube-slider__model">Continental Gt</h4>
+                        <h3 class="youtube-slider__title">Welcome back, rock 'n' roll</h3>
+                        <p class="youtube-slider__text">
+                            England, 1960s. Young men and women flock around cafes on their stripped down motorcycles,
+                            creating a culture high on style. The #ContinentalGT is a nod to that time. The machine with
+                            a story takes one back to the time when motorcycling was all about making a statement. Watch
+                            the film to relive the cultural phenomenon that refuses to fade away.
+                        </p>
+                        <a href="" class="youtube-slider__link"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                            See it in action</a>
+                    </div>
+                </div>
+                <div class="youtube-slider__item">
+                    <div class="youtube-slider__preview youtube-slider__preview--03">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </div>
+                    <div class="youtube-slider__content">
+                        <h4 class="youtube-slider__model">Himalayan</h4>
+                        <h3 class="youtube-slider__title">Built for all roads, built for no roads</h3>
+                        <p class="youtube-slider__text">
+                            Decades of expeditions. Thousands of kilometers of traversing the most challenging terrain.
+                            Years of living and evolving with a machine that responds to the mountains. That's how we
+                            made the Himalayan, our first dual-purpose motorcycle. Here is how it was built to be tough,
+                            versatile, and adaptable to all kind of terrain.
+                        </p>
+                        <a href="" class="youtube-slider__link"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                            See it in action</a>
+                    </div>
+                </div>
+                <div class="youtube-slider__item">
+                    <div class="youtube-slider__preview youtube-slider__preview--04">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </div>
+                    <div class="youtube-slider__content">
+                        <h4 class="youtube-slider__model">Meteor</h4>
+                        <h3 class="youtube-slider__title">Crusing Through Time</h3>
+                        <p class="youtube-slider__text">
+                            Growing up in the 1980s meant that the lasting image of a motorcycle for me was a cruiser of
+                            some sort. It's not that I was a 'cruiser guy', it's just that when you see lots of
+                            something, that becomes the main frame of reference, and desire in this case! Evolving from
+                            a diet of bicycles into my late teens, I was quite mesmerised by the idea of a
+                            quintessential American style cruiser - and the first one that I actually saw in the flesh
+                            and instantly fell in love with was the Royal Enfield Citybike.
+                        </p>
+                        <a href="" class="youtube-slider__link"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                            See it in action</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigator">
+                <div class="navigator__item">
+                    <h4 class="navigator__model">INT650</h4>
+                    <img src="./imgs/slide-motorcycles-01.png" class="navigator__img">
+                    <i class="fa fa-angle-left navigator__icon" aria-hidden="true"></i>
+                </div>
+                <div class="navigator__item">
+                    <h4 class="navigator__model">Continental GT</h4>
+                    <img src="./imgs/slide-motorcycles-02.png" class="navigator__img">
+                    <i class="fa fa-angle-left navigator__icon" aria-hidden="true"></i>
+                </div>
+                <div class="navigator__item">
+                    <h4 class="navigator__model">Himalayan</h4>
+                    <img src="./imgs/slide-motorcycles-03.png" class="navigator__img">
+                    <i class="fa fa-angle-left navigator__icon" aria-hidden="true"></i>
+                </div>
+                <div class="navigator__item">
+                    <h4 class="navigator__model">Meteor</h4>
+                    <img src="./imgs/slide-motorcycles-04.png" class="navigator__img">
+                    <i class="fa fa-angle-left navigator__icon" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page__section social">
+        <div class="page__container">
+            <h3 class="page__title">Social Media</h3>
+
+            <h3 class="social__title">Stay Connected With Us</h3>
+            <h4 class="social__sub-title">#royalenfieldnorthamerica</h4>
+
+            <div class="social__gallery">
+                <div class="gallery__item gallery__item--01">
+                    <div class="icons__list">
+                        <a href="" class="icons__link icons__link--facebook">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="icons__link icons__link--instagram">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="icons__link icons__link--twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--02">
+                    <div class="icons__list">
+                        <a href="" class="icons__link icons__link--facebook">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="icons__link icons__link--instagram">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="icons__link icons__link--twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--03">
+                    <div class="icons__list">
+                        <a href="" class="icons__link icons__link--facebook">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="icons__link icons__link--instagram">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="icons__link icons__link--twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--04">
+                    <div class="icons__list">
+                        <a href="" class="icons__link icons__link--facebook">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="icons__link icons__link--instagram">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="icons__link icons__link--twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--05">
+                    <div class="icons__list">
+                        <a href="" class="icons__link icons__link--facebook">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="icons__link icons__link--instagram">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="icons__link icons__link--twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--06">
+                    <div class="icons__list">
+                        <a href="" class="icons__link icons__link--facebook">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="icons__link icons__link--instagram">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="icons__link icons__link--twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__logo">
+                <a class="footer__logo--link" href="#">
+                    <img src="./imgs/dealer-logo.svg" class="footer__logo--img" alt="Royal Enfield">
+                </a>
+                <h3 class="footer__slogan">Duluth Motorcycles</h3>
+            </div>
+            <div class="footer__navigation">
+                <ul class="quick-links__list">
+                    <li class="quick-links__item"><a href="#"
+                            class="quick-links__link  "> New Inventory </a></li>
+                    <li class="quick-links__item"><a href="#"
+                            class="quick-links__link  "> Pre-Owned Inventory </a></li>
+                    <li class="quick-links__item"><a href="#"
+                            class="quick-links__link  "> Promotions </a></li>
+                    <li class="quick-links__item"><a href="#"
+                            class="quick-links__link  "> Accessories </a></li>
+                    <li class="quick-links__item"><a href="#"
+                            class="quick-links__link quick-links__link--button "> Contact Us </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p class="footer__text">120 W 2nd Street | Duluth, MN 55802 © Dealership Powered by Leadventure</p>
+        </div>
+    </footer>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <!-- Slick Slider -->
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <!-- Global -->
+    <script type="text/javascript" src="./js/app.js"></script>
+</body>
+
+</html>

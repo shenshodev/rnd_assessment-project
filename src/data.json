@@ -1,0 +1,21 @@
+{
+    "clientName": "Royal Enfield",
+    "clientSlogan": "Duluth Motorcycles",
+    "navbar": [
+        "New Inventory",
+        "Pre-Owned Inventory",
+        "Promotions",
+        "Accessories",
+        "Contact Us"
+    ],
+    "ctas": [
+        {
+            "subTitle": "",
+            "title": "New Inventory"
+        },
+        {
+            "subTitle": "Genuine Motorcycle",
+            "title": "Accessories"
+        }
+    ]
+}
