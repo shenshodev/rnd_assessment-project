@@ -23,5 +23,3 @@ Handlebas data is obtained from the **data.json** file (*/src/data.json*)
 
 
 Page URL: [https://shenshodev.github.io/rnd_assessment-page/]
-
-Repository URL: [https://github.com/shenshodev/rnd_assessment-page.git]
