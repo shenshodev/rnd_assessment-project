@@ -1,0 +1,1045 @@
+// ========== MIXINS AND FUNCTIONS ==========
+
+$phone-width: 767px;
+$tablet-width: 1023px;
+
+@function responsive-px($min-px, $max-px, $min-vw, $max-vw) {
+    @return calc(#{$min-px}px + (#{$max-px} - #{$min-px}) * ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})));
+}
+
+@function get-vw-mobile($px){
+    $vw-result: $px / 12.42;
+    @return #{$vw-result}vw;
+}
+
+@function get-vw-desktop($px){
+    $vw-result: $px / 19.2;
+    @return #{$vw-result}vw;
+}
+
+
+@mixin custom-mq($min-width: 320, $max-width: 1920) {
+    @media only screen and (min-width: #{$min-width}px) and (max-width: #{$max-width}px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media only screen and (max-width: #{$phone-width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: #{$phone-width + 1px}) and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin tablet-phone {
+    @media only screen and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin tablet-desktop {
+    @media only screen and (min-width: #{$phone-width + 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: #{$tablet-width + 1px}) {
+        @content;
+    }
+}
+
+@mixin container {
+    width: 100%;
+
+    @media (min-width: 768px) {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 992px) {
+        // MD
+        max-width: 970px;
+    }
+
+    @media (min-width: 1200px) {
+        // LG
+        max-width: 1440px;
+    }
+}
+
+// ========== VARIABLES ==========
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@100;300;400;500;900&display=swap');
+
+
+$font-primary: 'Roboto',
+sans-serif;
+
+$color-primary: #da291c;
+$color-secondary: #fff;
+$color-tertiary: #000;
+$support-color: #d0d0d0;
+$page-text-color: #fff;
+
+
+// ========== GENERAL ==========
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(../imgs/bg-page.png);
+    background-attachment: fixed;
+    font-family: $font-primary;
+    font-size: responsive-px(12, 16, 768, 1920);
+}
+
+%space-section{
+    padding: responsive-px(40, 60, 768, 1920) 0px;
+    @include phone {
+        padding: responsive-px(20, 40, 320, 767) 0px;
+    }
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.page {
+    &__title {
+        font-size: responsive-px(16, 24, 768, 1920);
+        @include phone {
+            font-size: responsive-px(16, 24, 320, 767);
+        }
+        letter-spacing: 0.2em;
+        color: $color-secondary;
+        text-transform: uppercase;
+        font-weight: 900;
+        text-align: center;
+        margin: 0px;
+        padding-bottom: 10px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 30px;
+            height: 4px;
+            background-color: $color-primary;
+        }
+    }
+    &__button{
+        &:visited,
+        &:focus,
+        & {
+            display: inline-block;
+            color: $color-secondary;
+            background-color: transparent;
+            border: 2px solid $color-secondary;
+            text-decoration: none !important;
+            transition: .3s;
+            text-align: center;
+            padding: responsive-px(5, 10, 768, 1920) responsive-px(15, 30, 768, 1920);
+            @include phone {
+                padding: responsive-px(5, 10, 320, 767) responsive-px(15, 30, 320, 767);
+            }
+        }
+    
+        &:hover {
+            background-color: $color-primary;
+            border: 2px solid $color-primary;
+            color: $color-secondary;
+        }
+    }
+}
+
+// ========== SECTIONS ==========
+
+.header {
+    background-color: $color-tertiary;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    .container {
+        @include tablet {
+            padding: 0px 15px;
+        }
+
+        @include desktop {
+            width: 94%;
+            margin: 0 auto;
+        }
+    }
+
+    .site-logo {
+        img {
+            width: responsive-px(140, 332, 768, 1920);
+            height: auto;
+
+            @include phone {
+                width: responsive-px(180, 332, 320, 767);
+            }
+        }
+    }
+
+    .slogan {
+        margin: 0px;
+        margin-left: 30px;
+
+        @include custom-mq(768, 1200) {
+            margin-left: 0px;
+        }
+
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $page-text-color;
+        font-size: responsive-px(10, 20, 768, 1920);
+
+        @include phone {
+            font-size: responsive-px(16, 20, 320, 767);
+            margin: 0px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            border-bottom: 1px solid $color-secondary;
+            text-align: center;
+        }
+    }
+
+    .navbar {
+        margin-bottom: 0px;
+
+        @include tablet-desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &::before,
+        &::after {
+            display: none;
+        }
+
+        .navbar-collapse {
+            box-shadow: none;
+        }
+    }
+
+    .navbar-header {
+        display: flex;
+        align-items: center;
+        padding: 30px 0px;
+
+        @include custom-mq(768, 1200) {
+            flex-direction: column;
+        }
+
+        @include phone {
+            justify-content: center;
+            padding: 60px 30px 30px 30px;
+        }
+
+        .navbar-toggle {
+            float: none;
+
+            span {
+                background-color: $color-secondary;
+            }
+        }
+    }
+
+    .nav {
+        @include tablet-desktop {
+            display: flex;
+            align-items: center;
+        }
+        
+        li {
+            @include phone {
+                text-align: center
+            }
+        }
+
+        a {
+            &:visited,
+            &:focus,
+            & {
+                color: $page-text-color;
+                background-color: transparent;
+                text-decoration: none;
+                transition: .3s;
+                padding: 0px;
+                margin-right: responsive-px(15, 60, 768, 1920);
+                font-size: responsive-px(10, 18, 768, 1920);
+                @include phone {
+                    padding: responsive-px(15, 30, 768, 1920) 0px;
+                    font-size: responsive-px(12, 18, 320, 767);
+                }
+            }
+
+
+
+            &.page__button {
+                margin: 0px;
+                padding: 10px 30px;
+                @include phone {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+                &:hover{
+                    background-color: $color-primary;
+                    color: $color-secondary;
+                }
+            }
+
+            &:hover {
+                color: $color-primary;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.hero {
+    background-image: url(../imgs/bg-hero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include phone {
+        background-image: url(../imgs/bg-hero-xs.jpg);
+    }
+
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: linear-gradient(to top, $color-tertiary, transparent);
+        z-index: 1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: linear-gradient(to right, $color-tertiary, transparent 32%);
+        z-index: 1;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+        padding-top: responsive-px(140, 240, 768, 1920);
+        padding-bottom: responsive-px(80, 120, 768, 1920);
+
+        @include phone {
+            padding-top: responsive-px(200, 240, 320, 767);
+            padding-bottom: responsive-px(80, 120, 320, 767);
+        }
+    }
+
+    &__logo {
+        position: relative;
+
+        span{
+            display: inline-block;
+            width: 30px;
+            height: 4px;
+            margin-right: 10px;
+            background-color: $color-primary;
+            vertical-align: middle;
+        }
+
+        img {
+            width: responsive-px(100, 200, 768, 1920);
+            height: auto;
+
+            @include phone {
+                width: responsive-px(100, 200, 320, 767);
+            }
+        }
+    }
+
+    &__title {
+        color: $page-text-color;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin: 1% 0% 2% 0%;
+        font-size: responsive-px(42, 84, 768, 1920);
+
+        @include phone {
+            font-weight: 300;
+            width: responsive-px(100, 200, 320, 767);
+            margin-bottom: 30%;
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    &__buttons {
+        .page__button {
+            font-size: responsive-px(12, 18, 768, 1920);
+
+            @include tablet-desktop {
+                &:nth-of-type(1) {
+                    margin-right: 1%;
+                }
+            }
+
+            @include phone {
+                font-size: responsive-px(12, 18, 320, 767);
+                display: block;
+                width: 80%;
+                margin: 0 auto 10px auto;
+            }
+        }
+    }
+
+    &__scroll {
+        text-align: center;
+        margin-top: 2%;
+        @include phone{
+            display: none;
+        }
+        a{
+            &:active, &:focus, &{
+                text-decoration: none;
+                display: inline-block;
+                color: $page-text-color;
+                font-size: responsive-px(30, 50, 768, 1920);
+                background-color: rgba($color-tertiary, 0.6);
+                height: responsive-px(50, 70, 768, 1920);
+                width: responsive-px(50, 70, 768, 1920);
+                line-height: responsive-px(50, 70, 768, 1920);
+                border-radius: 50px;
+                transition: .3s;
+            }
+            &:hover{
+                color: $color-tertiary;
+                background-color: $color-secondary;
+            }
+        }
+    }
+}
+
+.ctas {
+    padding: 15px;
+    background-color: $color-tertiary;
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+        @include phone{
+            grid-template-columns: 1fr;
+            row-gap: 15px;
+        }
+    }
+
+    &__link {
+
+        &:visited,
+        :active,
+        & {
+            flex-grow: 1;
+
+            @include phone {
+                flex-basis: 100%;
+            }
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none !important;
+            height: responsive-px(300, 600, 768, 1920);
+
+            @include phone {
+                height: responsive-px(240, 600, 320, 767);
+            }
+        }
+
+        &:nth-of-type(1) {
+            background-image: url(../imgs/bg-cta1.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &:nth-of-type(2) {
+            background-image: url(../imgs/bg-cta2.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba($color-tertiary, 0.4);
+            z-index: -1;
+            transition: .3s;
+            opacity: 1;
+        }
+
+        &:hover {
+            &::before {
+                opacity: 0;
+            }
+
+            .ctas__text {
+                &::after {
+                    width: 30%;
+                }
+            }
+        }
+    }
+
+    &__text {
+        color: $page-text-color;
+        font-weight: 300;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0px;
+        font-size: responsive-px(26, 32, 768, 1920);
+        padding: 14%;
+
+        &--block {
+            display: block;
+            color: $support-color;
+            font-size: responsive-px(14, 18, 768, 1920);
+        }
+
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            background: #000;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            filter: blur(responsive-px(50, 100, 768, 1920));
+
+            @include phone {
+                filter: blur(responsive-px(50, 100, 320, 767));
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 30%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            width: 0%;
+            margin: auto;
+            background-color: $color-primary;
+            z-index: 1;
+            transition: .3s;
+        }
+    }
+}
+
+.video {
+    @extend %space-section;
+    .page__title {
+        margin-bottom: 3%;
+    }
+}
+
+.promotions{
+    @extend %space-section;
+    .page__title{
+        margin-bottom: 6%;
+    }
+    .slider{
+        button{
+            &.slick-arrow{
+                position: absolute;
+                z-index: 5;
+                bottom: 10%;
+                width: 50px;
+                height: 50px;
+                background-color: $color-secondary;
+                border: none;
+                border-radius: 50px;
+                font-size: 40px;
+                transition: .3s;
+                &:hover{
+                    background-color: $color-primary;
+                    color: $color-secondary;
+                }
+            }
+            &.fa-angle-left{
+                right: 100px;
+            }
+            &.fa-angle-right{
+                right: 40px;
+            }
+        }
+
+        &__item{
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+.lineup{
+    padding: 8px 0px;
+    background-color: $color-tertiary;
+    &__container{
+        background-image: url(../imgs/bg-lineup.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 100px 0px;
+        @include phone{
+            padding: responsive-px(40, 100, 768, 1920) 0px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-image: linear-gradient(to left, $color-tertiary 16%, transparent 60%);
+            z-index: -1;
+            opacity: 0.9;
+        }
+    }
+    
+    .logos-slider{
+        margin: 2% auto 0 auto;
+        &__item{
+            img{
+                width: responsive-px(150, 300, 768, 1920);
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .motorcycles-slider{
+        margin: 0 auto 0 auto;
+        &__item{
+            img{
+                width: responsive-px(320, 800, 768, 1920);
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__button{
+        text-align: center;
+        .page__button{
+            font-size: responsive-px(16, 20, 768, 1920);
+            padding: 10px 80px;
+        }
+    }
+    
+    .youtube-slider{
+        @include phone{
+            display: none;
+        }
+        position: absolute;
+        top: responsive-px(60, 170, 768, 1920);
+        left: responsive-px(20, 110, 768, 1920);
+        width: responsive-px(200, 300, 768, 1920);
+        .preview{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: responsive-px(100, 160, 768, 1920);
+            i.fa{
+                color: $color-secondary;
+                font-size: 50px;
+            }
+            @for $i from 1 to 5{
+                &--0#{$i}{
+                    background-image: url(../imgs/slide-youtube-0#{$i}.jpg);
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+        }
+
+        &__item{
+            .content{
+                padding: responsive-px(10, 20, 768, 1920) responsive-px(20, 40, 768, 1920);
+                background-color: $color-tertiary;
+
+                &__model{
+                    text-transform: uppercase;
+                    color: $color-primary;
+                    font-size: responsive-px(12, 14, 768, 1920);
+                    margin: 0px;
+                    margin-bottom: 5px;
+                }
+                &__title{
+                    margin: 0px;
+                    margin-bottom: 12%;
+                    color: $color-secondary;
+                    font-weight: 300;
+                    font-size: responsive-px(16, 28, 768, 1920);
+                }
+                &__text{
+                    color: $support-color;
+                    margin: 0px;
+                    margin-bottom: 20%;
+                    font-size: responsive-px(10, 12, 768, 1920);
+                }
+                &__link{
+                    &:visited, &:focus, &{
+                        text-decoration: none;
+                        color: $support-color;
+                        transition: .3s;
+                        i.fa{
+                            color: $color-primary;
+                        }
+                    }
+                    &:hover{
+                        color: $page-text-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .navigator{
+        @include phone{
+            display: none;
+        }
+        position: absolute;
+        height: responsive-px(240, 400, 768, 1920);
+        right: 2%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: responsive-px(200, 300, 768, 1920);
+        &__item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &.slick-current{
+                h4{
+                    color: $page-text-color;
+                }
+                img{
+                    filter: opacity(100%);
+                }
+                i{
+                    opacity: 1;
+                }
+            }
+            &:hover{
+                h4{
+                    color: $color-primary;
+                }
+            }
+
+            h4{
+                color: $support-color;
+                transition: .3s;
+                font-size: responsive-px(10, 12, 768, 1920);
+                width: 120px;
+                transition: .3s;
+    
+            }
+            img{
+                width: responsive-px(80, 140, 768, 1920);
+                height: auto;
+                margin: 0 auto;
+                transition: .3s;
+                filter: opacity(60%);
+            }
+            i{
+                color: $color-primary;
+                font-size: 30px;
+                transition: .3s;
+                opacity: 0;
+            }
+        }
+
+    }
+}
+
+.social {
+    @extend %space-section;
+    background-color: rgba($color-tertiary, 0.5);
+    .page__title {
+        margin-bottom: 3%;
+    }
+
+    &__title {
+        font-size: responsive-px(24, 48, 768, 1920);
+        font-weight: 300;
+        color: $page-text-color;
+        text-align: center;
+        letter-spacing: 0.02em;
+        margin: 0px;
+        margin-bottom: 1%;
+    }
+
+    &__sub-title {
+        font-size: responsive-px(14, 20, 768, 1920);
+        color: $support-color;
+        font-weight: 600;
+        font-style: italic;
+        text-align: center;
+        letter-spacing: 0.1em;
+        margin: 0px;
+        margin-bottom: 4%;
+    }
+
+    .gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        @include phone{
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        &__item{
+            height: responsive-px(220, 500, 768, 1920);
+            @include phone{
+                height: responsive-px(120, 300, 320, 767);
+            }
+            @for $i from 1 to 7{
+                &--0#{$i}{
+                    background-image: url(../imgs/img-social-0#{$i}.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    @extend .gallery__item;
+                }
+            }
+            position: relative;
+            &::before{
+                content: '';
+                background-color: rgba($color-tertiary, 0.4);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                transition: .3s;
+                opacity: 1;
+            }
+            &:hover{
+                &::before{
+                    opacity: 0;
+                }
+                .icons__list{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .icons{
+        &__list{
+            position: absolute;
+            bottom: 20%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            z-index: 2;
+            opacity: 0;
+            transition: .6s;
+        }
+        &__link{
+            &:active, &:focus, &{
+                display: inline-block;
+                text-decoration: none !important;
+                border-radius: 50px;
+                height: 35px;
+                width: 36px;
+                line-height: 35px;
+                font-size: 20px;
+                @include phone{
+                    height: 30px;
+                    width: 30px;
+                    line-height: 30px;
+                    font-size: 16px;
+                }
+                svg{
+                    transition: .3s;
+                    width: 36px;
+                    height: 35px;
+                }
+
+            }
+            &:hover{
+                svg{
+                    transform: scale(0.8);
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $color-tertiary;
+    color: $page-text-color;
+
+    @include tablet-desktop {
+        text-align: center;
+    }
+
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 60px 0px;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        @include custom-mq(320, 1200) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo-link{
+            img{
+                width: responsive-px(160, 264, 768, 1920);
+                height: auto;
+    
+                @include phone {
+                    width: responsive-px(280, 264, 320, 767);
+                }
+            }
+        }
+    }
+
+    &__slogan {
+        color: $page-text-color;
+        margin: 0px;
+        margin-left: 30px;
+
+        @include custom-mq(320, 1200) {
+            margin-left: 0px;
+        }
+
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: responsive-px(10, 20, 768, 1920);
+
+        @include phone {
+            font-size: responsive-px(16, 20, 320, 767);
+            margin: 20% 0%;
+        }
+    }
+
+    &__navigation {
+        .quick-links {
+            display: flex;
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+
+            @include phone {
+                flex-wrap: wrap;
+            }
+
+            &__item {
+                @include phone {
+                    flex-basis: 100%;
+                }
+            }
+
+            &__link {
+                &:visited,
+                &:focus,
+                & {
+                    display: block;
+                    color: $page-text-color;
+                    background-color: transparent;
+                    text-decoration: none;
+                    transition: .3s;
+                    padding: responsive-px(5, 10, 768, 1920) responsive-px(15, 30, 768, 1920);
+                    font-size: responsive-px(12, 18, 768, 1920);
+
+                    @include phone {
+                        padding: responsive-px(15, 30, 768, 1920) 0px;
+                        font-size: responsive-px(16, 18, 320, 767);
+                    }
+                }
+
+                .page__button{
+                    @include phone {
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                }
+
+                &:hover {
+                    color: $color-primary;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        border-top: 1px solid $support-color;
+
+        @include phone {
+            text-align: center;
+        }
+
+        p{
+            font-size: 14px;
+            color: $support-color;
+            margin: 0px;
+            padding: 26px 0px;
+        }
+    }
+}

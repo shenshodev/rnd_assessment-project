@@ -3,26 +3,36 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
-
 const handlebars = require('handlebars');
 const gulpHandlebars = require('gulp-handlebars-html')(handlebars);
 const data = require('gulp-data');
-
-
+const { src, dest, series, parallel } = require('gulp');
 const reload = browserSync.reload;
 const paths = {
-  html:{
+  html: {
     src: './app/index.html'
   },
-  styles: {
-    src: './scss/*.scss',
-    dest: './app/css'
+  images: {
+    src: './src/imgs/*.*',
+    dest: './app/imgs'
   },
   scripts: {
-    src: './scripts/*.js',
+    src: './src/js/*.js',
     dest: './app/js'
   },
-  server:{
+  css: {
+    src: './src/css/**/*.*',
+    dest: './app/css'
+  },
+  scss: {
+    src: './src/style.scss',
+    dest: './app/css'
+  },
+  js: {
+    src: './src/script.js',
+    dest: './app/js'
+  },
+  server: {
     src: './app/'
   },
   handlebars: {
@@ -32,56 +42,76 @@ const paths = {
   }
 };
 
-function styles() {
-  return gulp.src(paths.styles.src)
+function exportImagesTask() {
+  return src(paths.images.src)
+    .pipe(dest(paths.images.dest));
+}
+
+function exportScriptsTask() {
+  return src(paths.scripts.src)
+    .pipe(dest(paths.scripts.dest));
+}
+
+function exportCssTask() {
+  return src(paths.css.src)
+    .pipe(dest(paths.css.dest));
+}
+
+function scssTask() {
+  return src(paths.scss.src)
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(rename({
       basename: 'app'
     }))
-    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(dest(paths.scss.dest))
     .pipe(browserSync.stream());
 }
- 
-function scripts() {
-  return gulp.src(paths.scripts.src, { sourcemaps: true })
+
+function scriptTask() {
+  return src(paths.js.src, { sourcemaps: true })
     .pipe(rename({
       basename: 'app'
     }))
-    .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(dest(paths.js.dest))
     .pipe(browserSync.stream());
 }
- 
+
 function handlebarsTask() {
-  return gulp.src(paths.handlebars.src)
-      .pipe(data(function(file) {
-          return require(paths.handlebars.data);
-      }))
-      .pipe(gulpHandlebars())
-      .pipe(rename('index.html'))
-      .pipe(gulp.dest(paths.handlebars.dest))
-      .pipe(browserSync.stream());
+  return src(paths.handlebars.src)
+    .pipe(data(function (file) {
+      return require(paths.handlebars.data);
+    }))
+    .pipe(gulpHandlebars())
+    .pipe(rename('index.html'))
+    .pipe(dest(paths.handlebars.dest))
+    .pipe(browserSync.stream());
 }
 
 function watch() {
-  browserSync.init({
-    server: {
-      baseDir: paths.server.src
-    }
+    browserSync.init({
+      server: {
+        baseDir: paths.server.src
+      }
   });
 
-  gulp.watch(paths.styles.src, styles);
-  // gulp.watch(paths.html.src).on('change', reload);
-  gulp.watch(paths.scripts.src, scripts);
+  // gulp.watch(paths.styles.src, styles); //Reload does not work when I do big changes on scss file
+  gulp.watch(paths.scss.src, scssTask).on('change', reload); //Always reload after a change on scss file
+  gulp.watch(paths.js.src, scriptTask);
   gulp.watch(paths.handlebars.src, handlebarsTask);
 }
- 
-// const build = gulp.parallel(styles, scripts);
- 
 
-exports.styles = styles;
-exports.scripts = scripts;
+const resources = parallel(exportCssTask, exportScriptsTask, exportImagesTask);
+const build = series(scssTask, handlebarsTask, scriptTask, resources);
+const start = series(build, watch);
+
+exports.images = exportImagesTask;
+exports.js = exportScriptsTask;
+exports.css = exportCssTask;
+exports.styles = parallel(scssTask, exportCssTask);
+exports.scripts = parallel(scriptTask, exportScriptsTask);
+exports.handlebars = handlebarsTask;
 exports.watch = watch;
-// exports.build = build;
-exports.handlebarsTask = handlebarsTask;
-exports.default = watch;
+exports.build = build;
+exports.start = start;
+exports.default = start;

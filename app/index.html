@@ -25,47 +25,46 @@
 
 <body>
     <header class="header">
-        <div class="header__container">
-            <nav class="navbar header__nav" role="navigation">
-                <div class="navbar-header header__menu">
-                    <button type="button" class="navbar-toggle header__menu--toggle" data-toggle="collapse"
+        <div class="container">
+            <nav class="navbar" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
                         data-target=".navbar-ex1-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="header__logo" href="#">
-                        <img src="./imgs/dealer-logo.svg" class="header__logo--img" alt="Royal Enfield">
+                    <a class="site-logo" href="#">
+                        <img src="./imgs/dealer-logo.svg" alt="Royal Enfield">
                     </a>
-                    <h3 class="header__slogan">Duluth Motorcycles</h3>
+                    <h3 class="slogan">Duluth Motorcycles</h3>
                 </div>
-                <div class="collapse navbar-collapse navbar-ex1-collapse header__nav--collapse">
-                    <ul class="nav nav__list">
-                        <li class="nav__item"><a href="#" class="nav__link  "> New Inventory </a></li>
-                        <li class="nav__item"><a href="#" class="nav__link  "> Pre-Owned Inventory </a></li>
-                        <li class="nav__item"><a href="#" class="nav__link  "> Promotions </a></li>
-                        <li class="nav__item"><a href="#" class="nav__link  "> Accessories </a></li>
-                        <li class="nav__item"><a href="#" class="nav__link nav__link--button "> Contact Us </a></li>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav">
+                        <li><a href="#" class=""> New Inventory </a></li>
+                        <li><a href="#" class=""> Pre-Owned Inventory </a></li>
+                        <li><a href="#" class=""> Promotions </a></li>
+                        <li><a href="#" class=""> Accessories </a></li>
+                        <li><a href="#" class="page__button"> Contact Us </a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
-
     <section class="hero">
-        <div class="page__container">
+        <div class="container">
             <div class="hero__logo">
-                <span class="hero__logo--red-line"></span>
-                <img src="./imgs/dealer-logo-white.svg" class="hero__logo--img" alt="Royal Enfield">
+                <span></span>
+                <img src="./imgs/dealer-logo-white.svg" alt="Royal Enfield">
             </div>
             <h1 class="hero__title">Pure <span>motorcycling</span> since 1901</h1>
             <div class="hero__buttons">
                 <a href="#" title="Discover the Lineup" class="page__button">Discover the Lineup</a>
                 <a href="#" title="View Inventory" class="page__button">View Inventory</a>
             </div>
-            <div class="hero__scroll-container">
-                <a href="#ctas-section" class="hero__scroll-link"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+            <div class="hero__scroll">
+                <a href="#ctas-section"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
             </div>
         </div>
     </section>
@@ -85,8 +84,8 @@
             </a>
         </div>
     </section>
-    <section class="page__section video">
-        <div class="page__container">
+    <section class="video">
+        <div class="container">
             <h3 class="page__title">Royal Enfield Lifestyle</h3>
 
             <div class="embed-responsive embed-responsive-16by9">
@@ -95,21 +94,21 @@
             </div>
         </div>
     </section>
-    <section class="page__section promotions">
-        <div class="page__container">
+    <section class="promotions">
+        <div class="container">
             <h3 class="page__title">Promotions</h3>
-            <div class="promotions__slider">
-                <div class="promotions__slide-item">
-                    <img src="./imgs/slide-promotions-01.jpg" class="promotions__img">
+            <div class="slider promotions-slider">
+                <div class="slider__item">
+                    <img src="./imgs/slide-promotions-01.jpg">
                 </div>
-                <div class="promotions__slide-item">
-                    <img src="./imgs/slide-promotions-02.jpg" class="promotions__img">
+                <div class="slider__item">
+                    <img src="./imgs/slide-promotions-02.jpg">
                 </div>
-                <div class="promotions__slide-item">
-                    <img src="./imgs/slide-promotions-03.jpg" class="promotions__img">
+                <div class="slider__item">
+                    <img src="./imgs/slide-promotions-03.jpg">
                 </div>
-                <div class="promotions__slide-item">
-                    <img src="./imgs/slide-promotions-04.jpg" class="promotions__img">
+                <div class="slider__item">
+                    <img src="./imgs/slide-promotions-04.jpg">
                 </div>
             </div>
         </div>
@@ -120,96 +119,97 @@
 
             <div class="logos-slider to-navigator">
                 <div class="logos-slider__item">
-                    <img src="./imgs/slide-logo-01.png" class="logos-slider__img">
+                    <img src="./imgs/slide-logo-01.png">
                 </div>
                 <div class="logos-slider__item">
-                    <img src="./imgs/slide-logo-02.png" class="logos-slider__img">
+                    <img src="./imgs/slide-logo-02.png">
                 </div>
                 <div class="logos-slider__item">
-                    <img src="./imgs/slide-logo-03.png" class="logos-slider__img">
+                    <img src="./imgs/slide-logo-03.png">
                 </div>
                 <div class="logos-slider__item">
-                    <img src="./imgs/slide-logo-04.png" class="logos-slider__img">
+                    <img src="./imgs/slide-logo-04.png">
                 </div>
             </div>
 
             <div class="motorcycles-slider to-navigator">
                 <div class="motorcycles-slider__item">
-                    <img src="./imgs/slide-motorcycles-01.png" class="motorcycles-slider__img">
+                    <img src="./imgs/slide-motorcycles-01.png">
                 </div>
                 <div class="motorcycles-slider__item">
-                    <img src="./imgs/slide-motorcycles-02.png" class="motorcycles-slider__img">
+                    <img src="./imgs/slide-motorcycles-02.png">
                 </div>
                 <div class="motorcycles-slider__item">
-                    <img src="./imgs/slide-motorcycles-03.png" class="motorcycles-slider__img">
+                    <img src="./imgs/slide-motorcycles-03.png">
                 </div>
                 <div class="motorcycles-slider__item">
-                    <img src="./imgs/slide-motorcycles-04.png" class="motorcycles-slider__img">
+                    <img src="./imgs/slide-motorcycles-04.png">
                 </div>
             </div>
+
             <div class="lineup__button">
                 <a href="" class="page__button">Discover</a>
             </div>
 
             <div class="youtube-slider to-navigator">
                 <div class="youtube-slider__item">
-                    <div class="youtube-slider__preview youtube-slider__preview--01">
+                    <div class="preview preview--01">
                         <i class="fa fa-youtube-play" aria-hidden="true"></i>
                     </div>
-                    <div class="youtube-slider__content">
-                        <h4 class="youtube-slider__model">Int650</h4>
-                        <h3 class="youtube-slider__title">Devil Is In The Details</h3>
-                        <p class="youtube-slider__text">
+                    <div class="content">
+                        <h4 class="content__model">Int650</h4>
+                        <h3 class="content__title">Devil Is In The Details</h3>
+                        <p class="content__text">
                             The quintessential modern classic roadster - that's a blast to ride on twisty back roads,
                             highways, or the urban jungle, with equal ease and grace, for novices and experienced riders
                             alike.
                         </p>
-                        <a href="" class="youtube-slider__link"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        <a href="" class="content__link"><i class="fa fa-youtube-play" aria-hidden="true"></i>
                             See it in action</a>
                     </div>
                 </div>
                 <div class="youtube-slider__item">
-                    <div class="youtube-slider__preview youtube-slider__preview--02">
+                    <div class="preview preview--02">
                         <i class="fa fa-youtube-play" aria-hidden="true"></i>
                     </div>
-                    <div class="youtube-slider__content">
-                        <h4 class="youtube-slider__model">Continental Gt</h4>
-                        <h3 class="youtube-slider__title">Welcome back, rock 'n' roll</h3>
-                        <p class="youtube-slider__text">
+                    <div class="content">
+                        <h4 class="content__model">Continental Gt</h4>
+                        <h3 class="content__title">Welcome back, rock 'n' roll</h3>
+                        <p class="content__text">
                             England, 1960s. Young men and women flock around cafes on their stripped down motorcycles,
                             creating a culture high on style. The #ContinentalGT is a nod to that time. The machine with
                             a story takes one back to the time when motorcycling was all about making a statement. Watch
                             the film to relive the cultural phenomenon that refuses to fade away.
                         </p>
-                        <a href="" class="youtube-slider__link"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        <a href="" class="content__link"><i class="fa fa-youtube-play" aria-hidden="true"></i>
                             See it in action</a>
                     </div>
                 </div>
                 <div class="youtube-slider__item">
-                    <div class="youtube-slider__preview youtube-slider__preview--03">
+                    <div class="preview preview--03">
                         <i class="fa fa-youtube-play" aria-hidden="true"></i>
                     </div>
-                    <div class="youtube-slider__content">
-                        <h4 class="youtube-slider__model">Himalayan</h4>
-                        <h3 class="youtube-slider__title">Built for all roads, built for no roads</h3>
-                        <p class="youtube-slider__text">
+                    <div class="content">
+                        <h4 class="content__model">Himalayan</h4>
+                        <h3 class="content__title">Built for all roads, built for no roads</h3>
+                        <p class="content__text">
                             Decades of expeditions. Thousands of kilometers of traversing the most challenging terrain.
                             Years of living and evolving with a machine that responds to the mountains. That's how we
                             made the Himalayan, our first dual-purpose motorcycle. Here is how it was built to be tough,
                             versatile, and adaptable to all kind of terrain.
                         </p>
-                        <a href="" class="youtube-slider__link"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        <a href="" class="content__link"><i class="fa fa-youtube-play" aria-hidden="true"></i>
                             See it in action</a>
                     </div>
                 </div>
                 <div class="youtube-slider__item">
-                    <div class="youtube-slider__preview youtube-slider__preview--04">
+                    <div class="preview preview--04">
                         <i class="fa fa-youtube-play" aria-hidden="true"></i>
                     </div>
-                    <div class="youtube-slider__content">
-                        <h4 class="youtube-slider__model">Meteor</h4>
-                        <h3 class="youtube-slider__title">Crusing Through Time</h3>
-                        <p class="youtube-slider__text">
+                    <div class="content">
+                        <h4 class="content__model">Meteor</h4>
+                        <h3 class="content__title">Crusing Through Time</h3>
+                        <p class="content__text">
                             Growing up in the 1980s meant that the lasting image of a motorcycle for me was a cruiser of
                             some sort. It's not that I was a 'cruiser guy', it's just that when you see lots of
                             something, that becomes the main frame of reference, and desire in this case! Evolving from
@@ -217,7 +217,7 @@
                             quintessential American style cruiser - and the first one that I actually saw in the flesh
                             and instantly fell in love with was the Royal Enfield Citybike.
                         </p>
-                        <a href="" class="youtube-slider__link"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        <a href="" class="content__link"><i class="fa fa-youtube-play" aria-hidden="true"></i>
                             See it in action</a>
                     </div>
                 </div>
@@ -225,111 +225,279 @@
 
             <div class="navigator">
                 <div class="navigator__item">
-                    <h4 class="navigator__model">INT650</h4>
-                    <img src="./imgs/slide-motorcycles-01.png" class="navigator__img">
-                    <i class="fa fa-angle-left navigator__icon" aria-hidden="true"></i>
+                    <h4>INT650</h4>
+                    <img src="./imgs/slide-motorcycles-01.png">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
                 </div>
                 <div class="navigator__item">
-                    <h4 class="navigator__model">Continental GT</h4>
-                    <img src="./imgs/slide-motorcycles-02.png" class="navigator__img">
-                    <i class="fa fa-angle-left navigator__icon" aria-hidden="true"></i>
+                    <h4>Continental GT</h4>
+                    <img src="./imgs/slide-motorcycles-02.png">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
                 </div>
                 <div class="navigator__item">
-                    <h4 class="navigator__model">Himalayan</h4>
-                    <img src="./imgs/slide-motorcycles-03.png" class="navigator__img">
-                    <i class="fa fa-angle-left navigator__icon" aria-hidden="true"></i>
+                    <h4>Himalayan</h4>
+                    <img src="./imgs/slide-motorcycles-03.png">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
                 </div>
                 <div class="navigator__item">
-                    <h4 class="navigator__model">Meteor</h4>
-                    <img src="./imgs/slide-motorcycles-04.png" class="navigator__img">
-                    <i class="fa fa-angle-left navigator__icon" aria-hidden="true"></i>
+                    <h4>Meteor</h4>
+                    <img src="./imgs/slide-motorcycles-04.png">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
     </section>
-    <section class="page__section social">
-        <div class="page__container">
+    <section class="social">
+        <div class="container">
             <h3 class="page__title">Social Media</h3>
 
             <h3 class="social__title">Stay Connected With Us</h3>
             <h4 class="social__sub-title">#royalenfieldnorthamerica</h4>
 
-            <div class="social__gallery">
-                <div class="gallery__item gallery__item--01">
+            <div class="gallery">
+                <div class="gallery__item--01">
                     <div class="icons__list">
-                        <a href="" class="icons__link icons__link--facebook">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -351 -5169 )">
+                                    <path
+                                        d="M 35.87586206896552 17.500000000000004  C 35.87586206896552 7.901551724137936  27.87268965517241 0.1206896551724139  18 0.1206896551724139  C 8.127310344827587 0.1206896551724139  0.12413793103448341 7.901551724137931  0.12413793103448341 17.5  C 0.12413793103448341 27.098448275862065  8.127310344827587 34.87931034482759  18 34.87931034482759  C 27.87268965517241 34.87931034482759  35.87586206896552 27.098448275862076  35.87586206896552 17.500000000000004  Z M 22.234344827586206 9.268362068965518  L 22.234344827586206 12.13051724137931  L 19.547379310344823 12.13051724137931  C 19.22896551724138 12.13051724137931  18.8751724137931 12.537844827586204  18.8751724137931 13.07913793103448  L 18.8751724137931 14.96551724137931  L 22.23620689655172 14.96551724137931  L 21.727862068965518 17.655689655172413  L 18.87517241379311 17.655689655172413  L 18.87517241379311 25.731637931034484  L 15.704068965517239 25.731637931034484  L 15.704068965517239 17.655689655172413  L 12.827172413793104 17.655689655172413  L 12.827172413793104 14.96551724137931  L 15.704068965517239 14.96551724137931  L 15.704068965517239 13.383275862068965  C 15.704068965517239 11.113103448275861  17.324068965517238 9.268362068965518  19.547379310344823 9.268362068965518  L 22.234344827586206 9.268362068965518  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 351 5169 )" />
+                                </g>
+                            </svg>
                         </a>
-                        <a href="" class="icons__link icons__link--instagram">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -393 -5170 )">
+                                    <path
+                                        d="M 17.500008835588474 0.5203738306929  C 8.130868145012222 0.5203738306929  0.5356789433603382 7.898557626583267  0.5356789433603382 17.00000858314309  C 0.5356789433603382 26.101459539702912  8.130868145012222 33.47964333559328  17.500008835588474 33.47964333559328  C 26.86914952616476 33.47964333559328  34.464338727816646 26.101459539702912  34.464338727816646 17.00000858314309  C 34.46433872804672 7.898519198319174  26.86918908467195 0.5203738304693997  17.500097191703432 0.5203738304693997  Z M 26.282424749618016 20.53883848336981  C 26.267714875954518 21.25087547945144  26.128842613108745 21.955336687732196  25.871711254456393 22.622276306948322  C 25.412802095496758 23.775233330263386  24.474557912331427 24.68667053676682  23.287690388330624 25.132468005470496  C 22.601134897961117 25.382252753875605  21.875954242377986 25.517157237782893  21.142974981705684 25.531446829341753  C 20.20051810030754 25.5732982350985  19.899595627667175 25.583151683377558  17.500008835588474 25.583151683377558  C 15.100422043509774 25.583151683377558  14.799499570869408 25.5732982350985  13.857060360648248 25.53149832820036  C 13.124081099975946 25.517208736641496  12.398900444392815 25.382304252734208  11.712344954023308 25.132519504329032  C 10.525477430022505 24.686722035625422  9.58723324685721 23.775284829121922  9.12832408789754 22.622327805806858  C 8.871192729245188 21.9553881865908  8.73232046639945 21.250926978310044  8.717610592735916 20.538889982228415  C 8.674563605634376 19.62336044029879  8.664420350052993 19.331035752591003  8.664420350052993 17.00000858314309  C 8.664420350052993 14.668981413695244  8.674563605634376 14.37665672598746  8.717592921558932 13.461144350344012  C 8.732302795222466 12.749107354262382  8.871175058068204 12.044646145981627  9.12830641672059 11.377706526765499  C 9.58721143813964 10.224742994129485  10.525456196375202 9.313298995995638  11.71232728284636 8.867497661957145  C 12.398882773215831 8.61771291355197  13.124063428798998 8.482808429644681  13.8570426894713 8.46851883808582  C 14.799499570869408 8.42671893118768  15.100422043509774 8.416865482908621  17.500008835588474 8.416865482908621  C 19.899595627667175 8.416865482908621  20.20051810030754 8.42671893118768  21.1429573105287 8.46851883808582  C 21.875936571201002 8.482808429644681  22.60111722678417 8.61771291355197  23.28767271715364 8.867497661957145  C 24.474540241154443 9.313295130660824  25.412784424319774 10.224732337164255  25.87169358327941 11.377689360479321  C 26.128824941931796 12.044628979695378  26.267697204777534 12.749090187976135  26.282407078441032 13.461127184057833  C 26.325454065542573 14.37665672598746  26.33559732112399 14.668981413695244  26.33559732112399 17.00000858314309  C 26.33559732112399 19.331035752591003  26.325454065542573 19.62336044029879  26.282424749618016 20.538872815942167  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 393 5170 )" />
+                                    <path
+                                        d="M 14.772001612562065 3.8899651720736723  C 14.765292197054265 3.3234787658875575  14.661228452943291 2.7623637697635672  14.46435859497317 2.2311443013017396  C 14.163791038181444 1.4520479252515628  13.547987809795217 0.8362446968653359  12.76889143374504 0.5356771400735738  C 12.237666326214125 0.3388052691618526  11.676545113411514 0.23474149300653838  11.110052695449717 0.22803412248471489  C 10.167916055047606 0.1850448612279365  9.88546624542714 0.1760038943967146  7.500008933761677 0.1760038943967146  C 5.114551622096251 0.1760038943967146  4.832101812475784 0.1850448612279365  3.8899651720736377 0.22801625496128963  C 3.323472754111876 0.23472362548318418  2.762351541309229 0.3387874016384984  2.2311264337783143 0.5356592725502196  C 1.452030057728173 0.8362268293419106  0.8362268293419106 1.4520300577281375  0.5356592725501841 2.2311264337783143  C 0.3387874016384984 2.762351541309229  0.23472362548318418 3.323472754111876  0.22801625496132516 3.8899651720736723  C 0.1850448612279365 4.832101812475784  0.1760038943967146 5.114694562283262  0.1760038943967146 7.500008933761677  C 0.1760038943967146 9.885323305240092  0.18506272875132623 10.16791605504757  0.22801625496132516 11.110052695449752  C 0.23471086355009163 11.676546362958007  0.3387750403265599 12.237669735945715  0.5356592725501841 12.76889143374504  C 0.8362268293419106 13.547987809795217  1.452030057728173 14.163791038181444  2.2311264337783143 14.464358594973206  C 2.762351541309229 14.661230465884856  3.323472754111876 14.76529424204017  3.8899651720736377 14.772001612562065  C 4.831869534671824 14.814883668678505  5.114426549432558 14.82401397312664  7.500008933761677 14.82401397312664  C 9.885591318090832 14.82401397312664  10.168148332851565 14.814955138772063  11.110052695449717 14.772001612562065  C 11.676545113411514 14.76529424204017  12.237666326214125 14.661230465884856  12.76889143374504 14.464358594973206  C 13.547987809795217 14.163791038181444  14.163791038181444 13.547987809795217  14.464358594973206 12.76889143374504  C 14.66124282719683 12.237669735945715  14.765307003973263 11.676546362958007  14.772001612562065 11.110052695449752  C 14.81488366867854 10.167933922570995  14.824013973126675 9.885484112950493  14.824013973126675 7.500008933761677  C 14.824013973126675 5.114533754572861  14.814973006295453 4.832101812475784  14.772001612562065 3.8899651720736723  Z M 7.500008933761677 12.087620634718093  C 4.966340953178161 12.087620634718093  2.912397232805297 10.033676914345193  2.912397232805297 7.500008933761677  C 2.912397232805297 4.966340953178161  4.966340953178161 2.9123972328052616  7.500008933761677 2.9123972328052616  C 10.033676914345193 2.9123972328052616  12.087620634718093 4.966340953178161  12.087620634718093 7.500008933761677  C 12.087620634752874 10.033684913942693  10.033684913942693 12.08762063475291  7.500026801319849 12.08762063475291  Z M 13.340902327291921 2.7311669431431085  C 13.340902327291921 3.32324458400592  12.860928565243093 3.803218346054748  12.268850924380317 3.803218346054748  C 11.676773283517505 3.803218346054748  11.196799521468677 3.32324458400592  11.196799521468677 2.7311669431431085  C 11.196799521468677 2.139089302280297  11.676773283517505 1.6591155402314683  12.268850924380317 1.6591155402314683  C 12.860928565243093 1.6591155402314683  13.340902327291921 2.139089302280297  13.340902327291921 2.7311669431431085  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 402 5179 )" />
+                                </g>
+                            </svg>
                         </a>
-                        <a href="" class="icons__link icons__link--twitter">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -433 -5170 )">
+                                    <path
+                                        d="M 35.87586206896552 17.500000000000004  C 35.87586206896552 7.901551724137936  27.87268965517241 0.1206896551724139  18 0.1206896551724139  C 8.127310344827587 0.1206896551724139  0.12413793103448341 7.901551724137931  0.12413793103448341 17.5  C 0.12413793103448341 27.098448275862065  8.127310344827587 34.87931034482759  18 34.87931034482759  C 27.87268965517241 34.87931034482759  35.87586206896552 27.098448275862076  35.87586206896552 17.500000000000004  Z M 27.02731034482759 12.584913793103446  C 26.55620689655173 13.271034482758619  25.958482758620686 13.875689655172415  25.271379310344827 14.357241379310343  C 25.278827586206894 14.505689655172413  25.280689655172417 14.654137931034484  25.280689655172417 14.79896551724138  C 25.280689655172417 19.324827586206894  21.740896551724138 24.540431034482758  15.264620689655175 24.540431034482758  C 13.27593103448276 24.540431034482758  11.425034482758624 23.975603448275866  9.868344827586208 23.001637931034484  C 10.142068965517245 23.034224137931037  10.423241379310348 23.046896551724135  10.708137931034484 23.046896551724135  C 12.357931034482762 23.046896551724135  13.87551724137931 22.50198275862069  15.080275862068966 21.582327586206894  C 13.540344827586207 21.55336206896552  12.240620689655172 20.56491379310345  11.791862068965518 19.2071551724138  C 12.006000000000002 19.245172413793107  12.225724137931033 19.26689655172414  12.45289655172414 19.26689655172414  C 12.773172413793104 19.26689655172414  13.086000000000002 19.225258620689655  13.380206896551726 19.147413793103453  C 11.769517241379312 18.83241379310345  10.55544827586207 17.449310344827584  10.55544827586207 15.791034482758624  L 10.55544827586207 15.749396551724136  C 11.030275862068965 16.00465517241379  11.574 16.160344827586208  12.151241379310342 16.178448275862067  C 11.205310344827588 15.562931034482759  10.585241379310343 14.516551724137932  10.585241379310343 13.327155172413793  C 10.585241379310343 12.700775862068967  10.758413793103449 12.110603448275864  11.061931034482757 11.605517241379312  C 12.799241379310343 13.676551724137934  15.391241379310346 15.03793103448276  18.318413793103446 15.184568965517242  C 18.25696551724138 14.93293103448276  18.227172413793102 14.672241379310346  18.227172413793102 14.4025  C 18.227172413793102 12.514310344827585  19.802482758620684 10.979137931034481  21.748344827586205 10.979137931034481  C 22.75944827586207 10.979137931034481  23.675586206896554 11.39551724137931  24.317999999999998 12.061724137931034  C 25.12055172413793 11.906034482758617  25.8728275862069 11.623620689655173  26.552482758620684 11.230775862068965  C 26.28993103448276 12.02913793103448  25.733172413793103 12.700775862068967  25.00510344827586 13.126206896551723  C 25.718275862068968 13.041120689655171  26.39606896551724 12.858275862068965  27.02731034482759 12.584913793103446  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 433 5170 )" />
+                                </g>
+                            </svg>
                         </a>
                     </div>
                 </div>
-                <div class="gallery__item gallery__item--02">
+                <div class="gallery__item--02">
                     <div class="icons__list">
-                        <a href="" class="icons__link icons__link--facebook">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -351 -5169 )">
+                                    <path
+                                        d="M 35.87586206896552 17.500000000000004  C 35.87586206896552 7.901551724137936  27.87268965517241 0.1206896551724139  18 0.1206896551724139  C 8.127310344827587 0.1206896551724139  0.12413793103448341 7.901551724137931  0.12413793103448341 17.5  C 0.12413793103448341 27.098448275862065  8.127310344827587 34.87931034482759  18 34.87931034482759  C 27.87268965517241 34.87931034482759  35.87586206896552 27.098448275862076  35.87586206896552 17.500000000000004  Z M 22.234344827586206 9.268362068965518  L 22.234344827586206 12.13051724137931  L 19.547379310344823 12.13051724137931  C 19.22896551724138 12.13051724137931  18.8751724137931 12.537844827586204  18.8751724137931 13.07913793103448  L 18.8751724137931 14.96551724137931  L 22.23620689655172 14.96551724137931  L 21.727862068965518 17.655689655172413  L 18.87517241379311 17.655689655172413  L 18.87517241379311 25.731637931034484  L 15.704068965517239 25.731637931034484  L 15.704068965517239 17.655689655172413  L 12.827172413793104 17.655689655172413  L 12.827172413793104 14.96551724137931  L 15.704068965517239 14.96551724137931  L 15.704068965517239 13.383275862068965  C 15.704068965517239 11.113103448275861  17.324068965517238 9.268362068965518  19.547379310344823 9.268362068965518  L 22.234344827586206 9.268362068965518  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 351 5169 )" />
+                                </g>
+                            </svg>
                         </a>
-                        <a href="" class="icons__link icons__link--instagram">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -393 -5170 )">
+                                    <path
+                                        d="M 17.500008835588474 0.5203738306929  C 8.130868145012222 0.5203738306929  0.5356789433603382 7.898557626583267  0.5356789433603382 17.00000858314309  C 0.5356789433603382 26.101459539702912  8.130868145012222 33.47964333559328  17.500008835588474 33.47964333559328  C 26.86914952616476 33.47964333559328  34.464338727816646 26.101459539702912  34.464338727816646 17.00000858314309  C 34.46433872804672 7.898519198319174  26.86918908467195 0.5203738304693997  17.500097191703432 0.5203738304693997  Z M 26.282424749618016 20.53883848336981  C 26.267714875954518 21.25087547945144  26.128842613108745 21.955336687732196  25.871711254456393 22.622276306948322  C 25.412802095496758 23.775233330263386  24.474557912331427 24.68667053676682  23.287690388330624 25.132468005470496  C 22.601134897961117 25.382252753875605  21.875954242377986 25.517157237782893  21.142974981705684 25.531446829341753  C 20.20051810030754 25.5732982350985  19.899595627667175 25.583151683377558  17.500008835588474 25.583151683377558  C 15.100422043509774 25.583151683377558  14.799499570869408 25.5732982350985  13.857060360648248 25.53149832820036  C 13.124081099975946 25.517208736641496  12.398900444392815 25.382304252734208  11.712344954023308 25.132519504329032  C 10.525477430022505 24.686722035625422  9.58723324685721 23.775284829121922  9.12832408789754 22.622327805806858  C 8.871192729245188 21.9553881865908  8.73232046639945 21.250926978310044  8.717610592735916 20.538889982228415  C 8.674563605634376 19.62336044029879  8.664420350052993 19.331035752591003  8.664420350052993 17.00000858314309  C 8.664420350052993 14.668981413695244  8.674563605634376 14.37665672598746  8.717592921558932 13.461144350344012  C 8.732302795222466 12.749107354262382  8.871175058068204 12.044646145981627  9.12830641672059 11.377706526765499  C 9.58721143813964 10.224742994129485  10.525456196375202 9.313298995995638  11.71232728284636 8.867497661957145  C 12.398882773215831 8.61771291355197  13.124063428798998 8.482808429644681  13.8570426894713 8.46851883808582  C 14.799499570869408 8.42671893118768  15.100422043509774 8.416865482908621  17.500008835588474 8.416865482908621  C 19.899595627667175 8.416865482908621  20.20051810030754 8.42671893118768  21.1429573105287 8.46851883808582  C 21.875936571201002 8.482808429644681  22.60111722678417 8.61771291355197  23.28767271715364 8.867497661957145  C 24.474540241154443 9.313295130660824  25.412784424319774 10.224732337164255  25.87169358327941 11.377689360479321  C 26.128824941931796 12.044628979695378  26.267697204777534 12.749090187976135  26.282407078441032 13.461127184057833  C 26.325454065542573 14.37665672598746  26.33559732112399 14.668981413695244  26.33559732112399 17.00000858314309  C 26.33559732112399 19.331035752591003  26.325454065542573 19.62336044029879  26.282424749618016 20.538872815942167  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 393 5170 )" />
+                                    <path
+                                        d="M 14.772001612562065 3.8899651720736723  C 14.765292197054265 3.3234787658875575  14.661228452943291 2.7623637697635672  14.46435859497317 2.2311443013017396  C 14.163791038181444 1.4520479252515628  13.547987809795217 0.8362446968653359  12.76889143374504 0.5356771400735738  C 12.237666326214125 0.3388052691618526  11.676545113411514 0.23474149300653838  11.110052695449717 0.22803412248471489  C 10.167916055047606 0.1850448612279365  9.88546624542714 0.1760038943967146  7.500008933761677 0.1760038943967146  C 5.114551622096251 0.1760038943967146  4.832101812475784 0.1850448612279365  3.8899651720736377 0.22801625496128963  C 3.323472754111876 0.23472362548318418  2.762351541309229 0.3387874016384984  2.2311264337783143 0.5356592725502196  C 1.452030057728173 0.8362268293419106  0.8362268293419106 1.4520300577281375  0.5356592725501841 2.2311264337783143  C 0.3387874016384984 2.762351541309229  0.23472362548318418 3.323472754111876  0.22801625496132516 3.8899651720736723  C 0.1850448612279365 4.832101812475784  0.1760038943967146 5.114694562283262  0.1760038943967146 7.500008933761677  C 0.1760038943967146 9.885323305240092  0.18506272875132623 10.16791605504757  0.22801625496132516 11.110052695449752  C 0.23471086355009163 11.676546362958007  0.3387750403265599 12.237669735945715  0.5356592725501841 12.76889143374504  C 0.8362268293419106 13.547987809795217  1.452030057728173 14.163791038181444  2.2311264337783143 14.464358594973206  C 2.762351541309229 14.661230465884856  3.323472754111876 14.76529424204017  3.8899651720736377 14.772001612562065  C 4.831869534671824 14.814883668678505  5.114426549432558 14.82401397312664  7.500008933761677 14.82401397312664  C 9.885591318090832 14.82401397312664  10.168148332851565 14.814955138772063  11.110052695449717 14.772001612562065  C 11.676545113411514 14.76529424204017  12.237666326214125 14.661230465884856  12.76889143374504 14.464358594973206  C 13.547987809795217 14.163791038181444  14.163791038181444 13.547987809795217  14.464358594973206 12.76889143374504  C 14.66124282719683 12.237669735945715  14.765307003973263 11.676546362958007  14.772001612562065 11.110052695449752  C 14.81488366867854 10.167933922570995  14.824013973126675 9.885484112950493  14.824013973126675 7.500008933761677  C 14.824013973126675 5.114533754572861  14.814973006295453 4.832101812475784  14.772001612562065 3.8899651720736723  Z M 7.500008933761677 12.087620634718093  C 4.966340953178161 12.087620634718093  2.912397232805297 10.033676914345193  2.912397232805297 7.500008933761677  C 2.912397232805297 4.966340953178161  4.966340953178161 2.9123972328052616  7.500008933761677 2.9123972328052616  C 10.033676914345193 2.9123972328052616  12.087620634718093 4.966340953178161  12.087620634718093 7.500008933761677  C 12.087620634752874 10.033684913942693  10.033684913942693 12.08762063475291  7.500026801319849 12.08762063475291  Z M 13.340902327291921 2.7311669431431085  C 13.340902327291921 3.32324458400592  12.860928565243093 3.803218346054748  12.268850924380317 3.803218346054748  C 11.676773283517505 3.803218346054748  11.196799521468677 3.32324458400592  11.196799521468677 2.7311669431431085  C 11.196799521468677 2.139089302280297  11.676773283517505 1.6591155402314683  12.268850924380317 1.6591155402314683  C 12.860928565243093 1.6591155402314683  13.340902327291921 2.139089302280297  13.340902327291921 2.7311669431431085  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 403 5179 )" />
+                                </g>
+                            </svg>
                         </a>
-                        <a href="" class="icons__link icons__link--twitter">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -433 -5170 )">
+                                    <path
+                                        d="M 35.87586206896552 17.500000000000004  C 35.87586206896552 7.901551724137936  27.87268965517241 0.1206896551724139  18 0.1206896551724139  C 8.127310344827587 0.1206896551724139  0.12413793103448341 7.901551724137931  0.12413793103448341 17.5  C 0.12413793103448341 27.098448275862065  8.127310344827587 34.87931034482759  18 34.87931034482759  C 27.87268965517241 34.87931034482759  35.87586206896552 27.098448275862076  35.87586206896552 17.500000000000004  Z M 27.02731034482759 12.584913793103446  C 26.55620689655173 13.271034482758619  25.958482758620686 13.875689655172415  25.271379310344827 14.357241379310343  C 25.278827586206894 14.505689655172413  25.280689655172417 14.654137931034484  25.280689655172417 14.79896551724138  C 25.280689655172417 19.324827586206894  21.740896551724138 24.540431034482758  15.264620689655175 24.540431034482758  C 13.27593103448276 24.540431034482758  11.425034482758624 23.975603448275866  9.868344827586208 23.001637931034484  C 10.142068965517245 23.034224137931037  10.423241379310348 23.046896551724135  10.708137931034484 23.046896551724135  C 12.357931034482762 23.046896551724135  13.87551724137931 22.50198275862069  15.080275862068966 21.582327586206894  C 13.540344827586207 21.55336206896552  12.240620689655172 20.56491379310345  11.791862068965518 19.2071551724138  C 12.006000000000002 19.245172413793107  12.225724137931033 19.26689655172414  12.45289655172414 19.26689655172414  C 12.773172413793104 19.26689655172414  13.086000000000002 19.225258620689655  13.380206896551726 19.147413793103453  C 11.769517241379312 18.83241379310345  10.55544827586207 17.449310344827584  10.55544827586207 15.791034482758624  L 10.55544827586207 15.749396551724136  C 11.030275862068965 16.00465517241379  11.574 16.160344827586208  12.151241379310342 16.178448275862067  C 11.205310344827588 15.562931034482759  10.585241379310343 14.516551724137932  10.585241379310343 13.327155172413793  C 10.585241379310343 12.700775862068967  10.758413793103449 12.110603448275864  11.061931034482757 11.605517241379312  C 12.799241379310343 13.676551724137934  15.391241379310346 15.03793103448276  18.318413793103446 15.184568965517242  C 18.25696551724138 14.93293103448276  18.227172413793102 14.672241379310346  18.227172413793102 14.4025  C 18.227172413793102 12.514310344827585  19.802482758620684 10.979137931034481  21.748344827586205 10.979137931034481  C 22.75944827586207 10.979137931034481  23.675586206896554 11.39551724137931  24.317999999999998 12.061724137931034  C 25.12055172413793 11.906034482758617  25.8728275862069 11.623620689655173  26.552482758620684 11.230775862068965  C 26.28993103448276 12.02913793103448  25.733172413793103 12.700775862068967  25.00510344827586 13.126206896551723  C 25.718275862068968 13.041120689655171  26.39606896551724 12.858275862068965  27.02731034482759 12.584913793103446  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 433 5170 )" />
+                                </g>
+                            </svg>
                         </a>
                     </div>
                 </div>
-                <div class="gallery__item gallery__item--03">
+                <div class="gallery__item--03">
                     <div class="icons__list">
-                        <a href="" class="icons__link icons__link--facebook">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -351 -5169 )">
+                                    <path
+                                        d="M 35.87586206896552 17.500000000000004  C 35.87586206896552 7.901551724137936  27.87268965517241 0.1206896551724139  18 0.1206896551724139  C 8.127310344827587 0.1206896551724139  0.12413793103448341 7.901551724137931  0.12413793103448341 17.5  C 0.12413793103448341 27.098448275862065  8.127310344827587 34.87931034482759  18 34.87931034482759  C 27.87268965517241 34.87931034482759  35.87586206896552 27.098448275862076  35.87586206896552 17.500000000000004  Z M 22.234344827586206 9.268362068965518  L 22.234344827586206 12.13051724137931  L 19.547379310344823 12.13051724137931  C 19.22896551724138 12.13051724137931  18.8751724137931 12.537844827586204  18.8751724137931 13.07913793103448  L 18.8751724137931 14.96551724137931  L 22.23620689655172 14.96551724137931  L 21.727862068965518 17.655689655172413  L 18.87517241379311 17.655689655172413  L 18.87517241379311 25.731637931034484  L 15.704068965517239 25.731637931034484  L 15.704068965517239 17.655689655172413  L 12.827172413793104 17.655689655172413  L 12.827172413793104 14.96551724137931  L 15.704068965517239 14.96551724137931  L 15.704068965517239 13.383275862068965  C 15.704068965517239 11.113103448275861  17.324068965517238 9.268362068965518  19.547379310344823 9.268362068965518  L 22.234344827586206 9.268362068965518  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 351 5169 )" />
+                                </g>
+                            </svg>
                         </a>
-                        <a href="" class="icons__link icons__link--instagram">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -393 -5170 )">
+                                    <path
+                                        d="M 17.500008835588474 0.5203738306929  C 8.130868145012222 0.5203738306929  0.5356789433603382 7.898557626583267  0.5356789433603382 17.00000858314309  C 0.5356789433603382 26.101459539702912  8.130868145012222 33.47964333559328  17.500008835588474 33.47964333559328  C 26.86914952616476 33.47964333559328  34.464338727816646 26.101459539702912  34.464338727816646 17.00000858314309  C 34.46433872804672 7.898519198319174  26.86918908467195 0.5203738304693997  17.500097191703432 0.5203738304693997  Z M 26.282424749618016 20.53883848336981  C 26.267714875954518 21.25087547945144  26.128842613108745 21.955336687732196  25.871711254456393 22.622276306948322  C 25.412802095496758 23.775233330263386  24.474557912331427 24.68667053676682  23.287690388330624 25.132468005470496  C 22.601134897961117 25.382252753875605  21.875954242377986 25.517157237782893  21.142974981705684 25.531446829341753  C 20.20051810030754 25.5732982350985  19.899595627667175 25.583151683377558  17.500008835588474 25.583151683377558  C 15.100422043509774 25.583151683377558  14.799499570869408 25.5732982350985  13.857060360648248 25.53149832820036  C 13.124081099975946 25.517208736641496  12.398900444392815 25.382304252734208  11.712344954023308 25.132519504329032  C 10.525477430022505 24.686722035625422  9.58723324685721 23.775284829121922  9.12832408789754 22.622327805806858  C 8.871192729245188 21.9553881865908  8.73232046639945 21.250926978310044  8.717610592735916 20.538889982228415  C 8.674563605634376 19.62336044029879  8.664420350052993 19.331035752591003  8.664420350052993 17.00000858314309  C 8.664420350052993 14.668981413695244  8.674563605634376 14.37665672598746  8.717592921558932 13.461144350344012  C 8.732302795222466 12.749107354262382  8.871175058068204 12.044646145981627  9.12830641672059 11.377706526765499  C 9.58721143813964 10.224742994129485  10.525456196375202 9.313298995995638  11.71232728284636 8.867497661957145  C 12.398882773215831 8.61771291355197  13.124063428798998 8.482808429644681  13.8570426894713 8.46851883808582  C 14.799499570869408 8.42671893118768  15.100422043509774 8.416865482908621  17.500008835588474 8.416865482908621  C 19.899595627667175 8.416865482908621  20.20051810030754 8.42671893118768  21.1429573105287 8.46851883808582  C 21.875936571201002 8.482808429644681  22.60111722678417 8.61771291355197  23.28767271715364 8.867497661957145  C 24.474540241154443 9.313295130660824  25.412784424319774 10.224732337164255  25.87169358327941 11.377689360479321  C 26.128824941931796 12.044628979695378  26.267697204777534 12.749090187976135  26.282407078441032 13.461127184057833  C 26.325454065542573 14.37665672598746  26.33559732112399 14.668981413695244  26.33559732112399 17.00000858314309  C 26.33559732112399 19.331035752591003  26.325454065542573 19.62336044029879  26.282424749618016 20.538872815942167  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 393 5170 )" />
+                                    <path
+                                        d="M 14.772001612562065 3.8899651720736723  C 14.765292197054265 3.3234787658875575  14.661228452943291 2.7623637697635672  14.46435859497317 2.2311443013017396  C 14.163791038181444 1.4520479252515628  13.547987809795217 0.8362446968653359  12.76889143374504 0.5356771400735738  C 12.237666326214125 0.3388052691618526  11.676545113411514 0.23474149300653838  11.110052695449717 0.22803412248471489  C 10.167916055047606 0.1850448612279365  9.88546624542714 0.1760038943967146  7.500008933761677 0.1760038943967146  C 5.114551622096251 0.1760038943967146  4.832101812475784 0.1850448612279365  3.8899651720736377 0.22801625496128963  C 3.323472754111876 0.23472362548318418  2.762351541309229 0.3387874016384984  2.2311264337783143 0.5356592725502196  C 1.452030057728173 0.8362268293419106  0.8362268293419106 1.4520300577281375  0.5356592725501841 2.2311264337783143  C 0.3387874016384984 2.762351541309229  0.23472362548318418 3.323472754111876  0.22801625496132516 3.8899651720736723  C 0.1850448612279365 4.832101812475784  0.1760038943967146 5.114694562283262  0.1760038943967146 7.500008933761677  C 0.1760038943967146 9.885323305240092  0.18506272875132623 10.16791605504757  0.22801625496132516 11.110052695449752  C 0.23471086355009163 11.676546362958007  0.3387750403265599 12.237669735945715  0.5356592725501841 12.76889143374504  C 0.8362268293419106 13.547987809795217  1.452030057728173 14.163791038181444  2.2311264337783143 14.464358594973206  C 2.762351541309229 14.661230465884856  3.323472754111876 14.76529424204017  3.8899651720736377 14.772001612562065  C 4.831869534671824 14.814883668678505  5.114426549432558 14.82401397312664  7.500008933761677 14.82401397312664  C 9.885591318090832 14.82401397312664  10.168148332851565 14.814955138772063  11.110052695449717 14.772001612562065  C 11.676545113411514 14.76529424204017  12.237666326214125 14.661230465884856  12.76889143374504 14.464358594973206  C 13.547987809795217 14.163791038181444  14.163791038181444 13.547987809795217  14.464358594973206 12.76889143374504  C 14.66124282719683 12.237669735945715  14.765307003973263 11.676546362958007  14.772001612562065 11.110052695449752  C 14.81488366867854 10.167933922570995  14.824013973126675 9.885484112950493  14.824013973126675 7.500008933761677  C 14.824013973126675 5.114533754572861  14.814973006295453 4.832101812475784  14.772001612562065 3.8899651720736723  Z M 7.500008933761677 12.087620634718093  C 4.966340953178161 12.087620634718093  2.912397232805297 10.033676914345193  2.912397232805297 7.500008933761677  C 2.912397232805297 4.966340953178161  4.966340953178161 2.9123972328052616  7.500008933761677 2.9123972328052616  C 10.033676914345193 2.9123972328052616  12.087620634718093 4.966340953178161  12.087620634718093 7.500008933761677  C 12.087620634752874 10.033684913942693  10.033684913942693 12.08762063475291  7.500026801319849 12.08762063475291  Z M 13.340902327291921 2.7311669431431085  C 13.340902327291921 3.32324458400592  12.860928565243093 3.803218346054748  12.268850924380317 3.803218346054748  C 11.676773283517505 3.803218346054748  11.196799521468677 3.32324458400592  11.196799521468677 2.7311669431431085  C 11.196799521468677 2.139089302280297  11.676773283517505 1.6591155402314683  12.268850924380317 1.6591155402314683  C 12.860928565243093 1.6591155402314683  13.340902327291921 2.139089302280297  13.340902327291921 2.7311669431431085  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 404 5179 )" />
+                                </g>
+                            </svg>
                         </a>
-                        <a href="" class="icons__link icons__link--twitter">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -433 -5170 )">
+                                    <path
+                                        d="M 35.87586206896552 17.500000000000004  C 35.87586206896552 7.901551724137936  27.87268965517241 0.1206896551724139  18 0.1206896551724139  C 8.127310344827587 0.1206896551724139  0.12413793103448341 7.901551724137931  0.12413793103448341 17.5  C 0.12413793103448341 27.098448275862065  8.127310344827587 34.87931034482759  18 34.87931034482759  C 27.87268965517241 34.87931034482759  35.87586206896552 27.098448275862076  35.87586206896552 17.500000000000004  Z M 27.02731034482759 12.584913793103446  C 26.55620689655173 13.271034482758619  25.958482758620686 13.875689655172415  25.271379310344827 14.357241379310343  C 25.278827586206894 14.505689655172413  25.280689655172417 14.654137931034484  25.280689655172417 14.79896551724138  C 25.280689655172417 19.324827586206894  21.740896551724138 24.540431034482758  15.264620689655175 24.540431034482758  C 13.27593103448276 24.540431034482758  11.425034482758624 23.975603448275866  9.868344827586208 23.001637931034484  C 10.142068965517245 23.034224137931037  10.423241379310348 23.046896551724135  10.708137931034484 23.046896551724135  C 12.357931034482762 23.046896551724135  13.87551724137931 22.50198275862069  15.080275862068966 21.582327586206894  C 13.540344827586207 21.55336206896552  12.240620689655172 20.56491379310345  11.791862068965518 19.2071551724138  C 12.006000000000002 19.245172413793107  12.225724137931033 19.26689655172414  12.45289655172414 19.26689655172414  C 12.773172413793104 19.26689655172414  13.086000000000002 19.225258620689655  13.380206896551726 19.147413793103453  C 11.769517241379312 18.83241379310345  10.55544827586207 17.449310344827584  10.55544827586207 15.791034482758624  L 10.55544827586207 15.749396551724136  C 11.030275862068965 16.00465517241379  11.574 16.160344827586208  12.151241379310342 16.178448275862067  C 11.205310344827588 15.562931034482759  10.585241379310343 14.516551724137932  10.585241379310343 13.327155172413793  C 10.585241379310343 12.700775862068967  10.758413793103449 12.110603448275864  11.061931034482757 11.605517241379312  C 12.799241379310343 13.676551724137934  15.391241379310346 15.03793103448276  18.318413793103446 15.184568965517242  C 18.25696551724138 14.93293103448276  18.227172413793102 14.672241379310346  18.227172413793102 14.4025  C 18.227172413793102 12.514310344827585  19.802482758620684 10.979137931034481  21.748344827586205 10.979137931034481  C 22.75944827586207 10.979137931034481  23.675586206896554 11.39551724137931  24.317999999999998 12.061724137931034  C 25.12055172413793 11.906034482758617  25.8728275862069 11.623620689655173  26.552482758620684 11.230775862068965  C 26.28993103448276 12.02913793103448  25.733172413793103 12.700775862068967  25.00510344827586 13.126206896551723  C 25.718275862068968 13.041120689655171  26.39606896551724 12.858275862068965  27.02731034482759 12.584913793103446  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 433 5170 )" />
+                                </g>
+                            </svg>
                         </a>
                     </div>
                 </div>
-                <div class="gallery__item gallery__item--04">
+                <div class="gallery__item--04">
                     <div class="icons__list">
-                        <a href="" class="icons__link icons__link--facebook">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -351 -5169 )">
+                                    <path
+                                        d="M 35.87586206896552 17.500000000000004  C 35.87586206896552 7.901551724137936  27.87268965517241 0.1206896551724139  18 0.1206896551724139  C 8.127310344827587 0.1206896551724139  0.12413793103448341 7.901551724137931  0.12413793103448341 17.5  C 0.12413793103448341 27.098448275862065  8.127310344827587 34.87931034482759  18 34.87931034482759  C 27.87268965517241 34.87931034482759  35.87586206896552 27.098448275862076  35.87586206896552 17.500000000000004  Z M 22.234344827586206 9.268362068965518  L 22.234344827586206 12.13051724137931  L 19.547379310344823 12.13051724137931  C 19.22896551724138 12.13051724137931  18.8751724137931 12.537844827586204  18.8751724137931 13.07913793103448  L 18.8751724137931 14.96551724137931  L 22.23620689655172 14.96551724137931  L 21.727862068965518 17.655689655172413  L 18.87517241379311 17.655689655172413  L 18.87517241379311 25.731637931034484  L 15.704068965517239 25.731637931034484  L 15.704068965517239 17.655689655172413  L 12.827172413793104 17.655689655172413  L 12.827172413793104 14.96551724137931  L 15.704068965517239 14.96551724137931  L 15.704068965517239 13.383275862068965  C 15.704068965517239 11.113103448275861  17.324068965517238 9.268362068965518  19.547379310344823 9.268362068965518  L 22.234344827586206 9.268362068965518  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 351 5169 )" />
+                                </g>
+                            </svg>
                         </a>
-                        <a href="" class="icons__link icons__link--instagram">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -393 -5170 )">
+                                    <path
+                                        d="M 17.500008835588474 0.5203738306929  C 8.130868145012222 0.5203738306929  0.5356789433603382 7.898557626583267  0.5356789433603382 17.00000858314309  C 0.5356789433603382 26.101459539702912  8.130868145012222 33.47964333559328  17.500008835588474 33.47964333559328  C 26.86914952616476 33.47964333559328  34.464338727816646 26.101459539702912  34.464338727816646 17.00000858314309  C 34.46433872804672 7.898519198319174  26.86918908467195 0.5203738304693997  17.500097191703432 0.5203738304693997  Z M 26.282424749618016 20.53883848336981  C 26.267714875954518 21.25087547945144  26.128842613108745 21.955336687732196  25.871711254456393 22.622276306948322  C 25.412802095496758 23.775233330263386  24.474557912331427 24.68667053676682  23.287690388330624 25.132468005470496  C 22.601134897961117 25.382252753875605  21.875954242377986 25.517157237782893  21.142974981705684 25.531446829341753  C 20.20051810030754 25.5732982350985  19.899595627667175 25.583151683377558  17.500008835588474 25.583151683377558  C 15.100422043509774 25.583151683377558  14.799499570869408 25.5732982350985  13.857060360648248 25.53149832820036  C 13.124081099975946 25.517208736641496  12.398900444392815 25.382304252734208  11.712344954023308 25.132519504329032  C 10.525477430022505 24.686722035625422  9.58723324685721 23.775284829121922  9.12832408789754 22.622327805806858  C 8.871192729245188 21.9553881865908  8.73232046639945 21.250926978310044  8.717610592735916 20.538889982228415  C 8.674563605634376 19.62336044029879  8.664420350052993 19.331035752591003  8.664420350052993 17.00000858314309  C 8.664420350052993 14.668981413695244  8.674563605634376 14.37665672598746  8.717592921558932 13.461144350344012  C 8.732302795222466 12.749107354262382  8.871175058068204 12.044646145981627  9.12830641672059 11.377706526765499  C 9.58721143813964 10.224742994129485  10.525456196375202 9.313298995995638  11.71232728284636 8.867497661957145  C 12.398882773215831 8.61771291355197  13.124063428798998 8.482808429644681  13.8570426894713 8.46851883808582  C 14.799499570869408 8.42671893118768  15.100422043509774 8.416865482908621  17.500008835588474 8.416865482908621  C 19.899595627667175 8.416865482908621  20.20051810030754 8.42671893118768  21.1429573105287 8.46851883808582  C 21.875936571201002 8.482808429644681  22.60111722678417 8.61771291355197  23.28767271715364 8.867497661957145  C 24.474540241154443 9.313295130660824  25.412784424319774 10.224732337164255  25.87169358327941 11.377689360479321  C 26.128824941931796 12.044628979695378  26.267697204777534 12.749090187976135  26.282407078441032 13.461127184057833  C 26.325454065542573 14.37665672598746  26.33559732112399 14.668981413695244  26.33559732112399 17.00000858314309  C 26.33559732112399 19.331035752591003  26.325454065542573 19.62336044029879  26.282424749618016 20.538872815942167  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 393 5170 )" />
+                                    <path
+                                        d="M 14.772001612562065 3.8899651720736723  C 14.765292197054265 3.3234787658875575  14.661228452943291 2.7623637697635672  14.46435859497317 2.2311443013017396  C 14.163791038181444 1.4520479252515628  13.547987809795217 0.8362446968653359  12.76889143374504 0.5356771400735738  C 12.237666326214125 0.3388052691618526  11.676545113411514 0.23474149300653838  11.110052695449717 0.22803412248471489  C 10.167916055047606 0.1850448612279365  9.88546624542714 0.1760038943967146  7.500008933761677 0.1760038943967146  C 5.114551622096251 0.1760038943967146  4.832101812475784 0.1850448612279365  3.8899651720736377 0.22801625496128963  C 3.323472754111876 0.23472362548318418  2.762351541309229 0.3387874016384984  2.2311264337783143 0.5356592725502196  C 1.452030057728173 0.8362268293419106  0.8362268293419106 1.4520300577281375  0.5356592725501841 2.2311264337783143  C 0.3387874016384984 2.762351541309229  0.23472362548318418 3.323472754111876  0.22801625496132516 3.8899651720736723  C 0.1850448612279365 4.832101812475784  0.1760038943967146 5.114694562283262  0.1760038943967146 7.500008933761677  C 0.1760038943967146 9.885323305240092  0.18506272875132623 10.16791605504757  0.22801625496132516 11.110052695449752  C 0.23471086355009163 11.676546362958007  0.3387750403265599 12.237669735945715  0.5356592725501841 12.76889143374504  C 0.8362268293419106 13.547987809795217  1.452030057728173 14.163791038181444  2.2311264337783143 14.464358594973206  C 2.762351541309229 14.661230465884856  3.323472754111876 14.76529424204017  3.8899651720736377 14.772001612562065  C 4.831869534671824 14.814883668678505  5.114426549432558 14.82401397312664  7.500008933761677 14.82401397312664  C 9.885591318090832 14.82401397312664  10.168148332851565 14.814955138772063  11.110052695449717 14.772001612562065  C 11.676545113411514 14.76529424204017  12.237666326214125 14.661230465884856  12.76889143374504 14.464358594973206  C 13.547987809795217 14.163791038181444  14.163791038181444 13.547987809795217  14.464358594973206 12.76889143374504  C 14.66124282719683 12.237669735945715  14.765307003973263 11.676546362958007  14.772001612562065 11.110052695449752  C 14.81488366867854 10.167933922570995  14.824013973126675 9.885484112950493  14.824013973126675 7.500008933761677  C 14.824013973126675 5.114533754572861  14.814973006295453 4.832101812475784  14.772001612562065 3.8899651720736723  Z M 7.500008933761677 12.087620634718093  C 4.966340953178161 12.087620634718093  2.912397232805297 10.033676914345193  2.912397232805297 7.500008933761677  C 2.912397232805297 4.966340953178161  4.966340953178161 2.9123972328052616  7.500008933761677 2.9123972328052616  C 10.033676914345193 2.9123972328052616  12.087620634718093 4.966340953178161  12.087620634718093 7.500008933761677  C 12.087620634752874 10.033684913942693  10.033684913942693 12.08762063475291  7.500026801319849 12.08762063475291  Z M 13.340902327291921 2.7311669431431085  C 13.340902327291921 3.32324458400592  12.860928565243093 3.803218346054748  12.268850924380317 3.803218346054748  C 11.676773283517505 3.803218346054748  11.196799521468677 3.32324458400592  11.196799521468677 2.7311669431431085  C 11.196799521468677 2.139089302280297  11.676773283517505 1.6591155402314683  12.268850924380317 1.6591155402314683  C 12.860928565243093 1.6591155402314683  13.340902327291921 2.139089302280297  13.340902327291921 2.7311669431431085  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 402 5179 )" />
+                                </g>
+                            </svg>
                         </a>
-                        <a href="" class="icons__link icons__link--twitter">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -433 -5170 )">
+                                    <path
+                                        d="M 35.87586206896552 17.500000000000004  C 35.87586206896552 7.901551724137936  27.87268965517241 0.1206896551724139  18 0.1206896551724139  C 8.127310344827587 0.1206896551724139  0.12413793103448341 7.901551724137931  0.12413793103448341 17.5  C 0.12413793103448341 27.098448275862065  8.127310344827587 34.87931034482759  18 34.87931034482759  C 27.87268965517241 34.87931034482759  35.87586206896552 27.098448275862076  35.87586206896552 17.500000000000004  Z M 27.02731034482759 12.584913793103446  C 26.55620689655173 13.271034482758619  25.958482758620686 13.875689655172415  25.271379310344827 14.357241379310343  C 25.278827586206894 14.505689655172413  25.280689655172417 14.654137931034484  25.280689655172417 14.79896551724138  C 25.280689655172417 19.324827586206894  21.740896551724138 24.540431034482758  15.264620689655175 24.540431034482758  C 13.27593103448276 24.540431034482758  11.425034482758624 23.975603448275866  9.868344827586208 23.001637931034484  C 10.142068965517245 23.034224137931037  10.423241379310348 23.046896551724135  10.708137931034484 23.046896551724135  C 12.357931034482762 23.046896551724135  13.87551724137931 22.50198275862069  15.080275862068966 21.582327586206894  C 13.540344827586207 21.55336206896552  12.240620689655172 20.56491379310345  11.791862068965518 19.2071551724138  C 12.006000000000002 19.245172413793107  12.225724137931033 19.26689655172414  12.45289655172414 19.26689655172414  C 12.773172413793104 19.26689655172414  13.086000000000002 19.225258620689655  13.380206896551726 19.147413793103453  C 11.769517241379312 18.83241379310345  10.55544827586207 17.449310344827584  10.55544827586207 15.791034482758624  L 10.55544827586207 15.749396551724136  C 11.030275862068965 16.00465517241379  11.574 16.160344827586208  12.151241379310342 16.178448275862067  C 11.205310344827588 15.562931034482759  10.585241379310343 14.516551724137932  10.585241379310343 13.327155172413793  C 10.585241379310343 12.700775862068967  10.758413793103449 12.110603448275864  11.061931034482757 11.605517241379312  C 12.799241379310343 13.676551724137934  15.391241379310346 15.03793103448276  18.318413793103446 15.184568965517242  C 18.25696551724138 14.93293103448276  18.227172413793102 14.672241379310346  18.227172413793102 14.4025  C 18.227172413793102 12.514310344827585  19.802482758620684 10.979137931034481  21.748344827586205 10.979137931034481  C 22.75944827586207 10.979137931034481  23.675586206896554 11.39551724137931  24.317999999999998 12.061724137931034  C 25.12055172413793 11.906034482758617  25.8728275862069 11.623620689655173  26.552482758620684 11.230775862068965  C 26.28993103448276 12.02913793103448  25.733172413793103 12.700775862068967  25.00510344827586 13.126206896551723  C 25.718275862068968 13.041120689655171  26.39606896551724 12.858275862068965  27.02731034482759 12.584913793103446  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 433 5170 )" />
+                                </g>
+                            </svg>
                         </a>
                     </div>
                 </div>
-                <div class="gallery__item gallery__item--05">
+                <div class="gallery__item--05">
                     <div class="icons__list">
-                        <a href="" class="icons__link icons__link--facebook">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -351 -5169 )">
+                                    <path
+                                        d="M 35.87586206896552 17.500000000000004  C 35.87586206896552 7.901551724137936  27.87268965517241 0.1206896551724139  18 0.1206896551724139  C 8.127310344827587 0.1206896551724139  0.12413793103448341 7.901551724137931  0.12413793103448341 17.5  C 0.12413793103448341 27.098448275862065  8.127310344827587 34.87931034482759  18 34.87931034482759  C 27.87268965517241 34.87931034482759  35.87586206896552 27.098448275862076  35.87586206896552 17.500000000000004  Z M 22.234344827586206 9.268362068965518  L 22.234344827586206 12.13051724137931  L 19.547379310344823 12.13051724137931  C 19.22896551724138 12.13051724137931  18.8751724137931 12.537844827586204  18.8751724137931 13.07913793103448  L 18.8751724137931 14.96551724137931  L 22.23620689655172 14.96551724137931  L 21.727862068965518 17.655689655172413  L 18.87517241379311 17.655689655172413  L 18.87517241379311 25.731637931034484  L 15.704068965517239 25.731637931034484  L 15.704068965517239 17.655689655172413  L 12.827172413793104 17.655689655172413  L 12.827172413793104 14.96551724137931  L 15.704068965517239 14.96551724137931  L 15.704068965517239 13.383275862068965  C 15.704068965517239 11.113103448275861  17.324068965517238 9.268362068965518  19.547379310344823 9.268362068965518  L 22.234344827586206 9.268362068965518  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 351 5169 )" />
+                                </g>
+                            </svg>
                         </a>
-                        <a href="" class="icons__link icons__link--instagram">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -393 -5170 )">
+                                    <path
+                                        d="M 17.500008835588474 0.5203738306929  C 8.130868145012222 0.5203738306929  0.5356789433603382 7.898557626583267  0.5356789433603382 17.00000858314309  C 0.5356789433603382 26.101459539702912  8.130868145012222 33.47964333559328  17.500008835588474 33.47964333559328  C 26.86914952616476 33.47964333559328  34.464338727816646 26.101459539702912  34.464338727816646 17.00000858314309  C 34.46433872804672 7.898519198319174  26.86918908467195 0.5203738304693997  17.500097191703432 0.5203738304693997  Z M 26.282424749618016 20.53883848336981  C 26.267714875954518 21.25087547945144  26.128842613108745 21.955336687732196  25.871711254456393 22.622276306948322  C 25.412802095496758 23.775233330263386  24.474557912331427 24.68667053676682  23.287690388330624 25.132468005470496  C 22.601134897961117 25.382252753875605  21.875954242377986 25.517157237782893  21.142974981705684 25.531446829341753  C 20.20051810030754 25.5732982350985  19.899595627667175 25.583151683377558  17.500008835588474 25.583151683377558  C 15.100422043509774 25.583151683377558  14.799499570869408 25.5732982350985  13.857060360648248 25.53149832820036  C 13.124081099975946 25.517208736641496  12.398900444392815 25.382304252734208  11.712344954023308 25.132519504329032  C 10.525477430022505 24.686722035625422  9.58723324685721 23.775284829121922  9.12832408789754 22.622327805806858  C 8.871192729245188 21.9553881865908  8.73232046639945 21.250926978310044  8.717610592735916 20.538889982228415  C 8.674563605634376 19.62336044029879  8.664420350052993 19.331035752591003  8.664420350052993 17.00000858314309  C 8.664420350052993 14.668981413695244  8.674563605634376 14.37665672598746  8.717592921558932 13.461144350344012  C 8.732302795222466 12.749107354262382  8.871175058068204 12.044646145981627  9.12830641672059 11.377706526765499  C 9.58721143813964 10.224742994129485  10.525456196375202 9.313298995995638  11.71232728284636 8.867497661957145  C 12.398882773215831 8.61771291355197  13.124063428798998 8.482808429644681  13.8570426894713 8.46851883808582  C 14.799499570869408 8.42671893118768  15.100422043509774 8.416865482908621  17.500008835588474 8.416865482908621  C 19.899595627667175 8.416865482908621  20.20051810030754 8.42671893118768  21.1429573105287 8.46851883808582  C 21.875936571201002 8.482808429644681  22.60111722678417 8.61771291355197  23.28767271715364 8.867497661957145  C 24.474540241154443 9.313295130660824  25.412784424319774 10.224732337164255  25.87169358327941 11.377689360479321  C 26.128824941931796 12.044628979695378  26.267697204777534 12.749090187976135  26.282407078441032 13.461127184057833  C 26.325454065542573 14.37665672598746  26.33559732112399 14.668981413695244  26.33559732112399 17.00000858314309  C 26.33559732112399 19.331035752591003  26.325454065542573 19.62336044029879  26.282424749618016 20.538872815942167  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 393 5170 )" />
+                                    <path
+                                        d="M 14.772001612562065 3.8899651720736723  C 14.765292197054265 3.3234787658875575  14.661228452943291 2.7623637697635672  14.46435859497317 2.2311443013017396  C 14.163791038181444 1.4520479252515628  13.547987809795217 0.8362446968653359  12.76889143374504 0.5356771400735738  C 12.237666326214125 0.3388052691618526  11.676545113411514 0.23474149300653838  11.110052695449717 0.22803412248471489  C 10.167916055047606 0.1850448612279365  9.88546624542714 0.1760038943967146  7.500008933761677 0.1760038943967146  C 5.114551622096251 0.1760038943967146  4.832101812475784 0.1850448612279365  3.8899651720736377 0.22801625496128963  C 3.323472754111876 0.23472362548318418  2.762351541309229 0.3387874016384984  2.2311264337783143 0.5356592725502196  C 1.452030057728173 0.8362268293419106  0.8362268293419106 1.4520300577281375  0.5356592725501841 2.2311264337783143  C 0.3387874016384984 2.762351541309229  0.23472362548318418 3.323472754111876  0.22801625496132516 3.8899651720736723  C 0.1850448612279365 4.832101812475784  0.1760038943967146 5.114694562283262  0.1760038943967146 7.500008933761677  C 0.1760038943967146 9.885323305240092  0.18506272875132623 10.16791605504757  0.22801625496132516 11.110052695449752  C 0.23471086355009163 11.676546362958007  0.3387750403265599 12.237669735945715  0.5356592725501841 12.76889143374504  C 0.8362268293419106 13.547987809795217  1.452030057728173 14.163791038181444  2.2311264337783143 14.464358594973206  C 2.762351541309229 14.661230465884856  3.323472754111876 14.76529424204017  3.8899651720736377 14.772001612562065  C 4.831869534671824 14.814883668678505  5.114426549432558 14.82401397312664  7.500008933761677 14.82401397312664  C 9.885591318090832 14.82401397312664  10.168148332851565 14.814955138772063  11.110052695449717 14.772001612562065  C 11.676545113411514 14.76529424204017  12.237666326214125 14.661230465884856  12.76889143374504 14.464358594973206  C 13.547987809795217 14.163791038181444  14.163791038181444 13.547987809795217  14.464358594973206 12.76889143374504  C 14.66124282719683 12.237669735945715  14.765307003973263 11.676546362958007  14.772001612562065 11.110052695449752  C 14.81488366867854 10.167933922570995  14.824013973126675 9.885484112950493  14.824013973126675 7.500008933761677  C 14.824013973126675 5.114533754572861  14.814973006295453 4.832101812475784  14.772001612562065 3.8899651720736723  Z M 7.500008933761677 12.087620634718093  C 4.966340953178161 12.087620634718093  2.912397232805297 10.033676914345193  2.912397232805297 7.500008933761677  C 2.912397232805297 4.966340953178161  4.966340953178161 2.9123972328052616  7.500008933761677 2.9123972328052616  C 10.033676914345193 2.9123972328052616  12.087620634718093 4.966340953178161  12.087620634718093 7.500008933761677  C 12.087620634752874 10.033684913942693  10.033684913942693 12.08762063475291  7.500026801319849 12.08762063475291  Z M 13.340902327291921 2.7311669431431085  C 13.340902327291921 3.32324458400592  12.860928565243093 3.803218346054748  12.268850924380317 3.803218346054748  C 11.676773283517505 3.803218346054748  11.196799521468677 3.32324458400592  11.196799521468677 2.7311669431431085  C 11.196799521468677 2.139089302280297  11.676773283517505 1.6591155402314683  12.268850924380317 1.6591155402314683  C 12.860928565243093 1.6591155402314683  13.340902327291921 2.139089302280297  13.340902327291921 2.7311669431431085  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 403 5179 )" />
+                                </g>
+                            </svg>
                         </a>
-                        <a href="" class="icons__link icons__link--twitter">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -433 -5170 )">
+                                    <path
+                                        d="M 35.87586206896552 17.500000000000004  C 35.87586206896552 7.901551724137936  27.87268965517241 0.1206896551724139  18 0.1206896551724139  C 8.127310344827587 0.1206896551724139  0.12413793103448341 7.901551724137931  0.12413793103448341 17.5  C 0.12413793103448341 27.098448275862065  8.127310344827587 34.87931034482759  18 34.87931034482759  C 27.87268965517241 34.87931034482759  35.87586206896552 27.098448275862076  35.87586206896552 17.500000000000004  Z M 27.02731034482759 12.584913793103446  C 26.55620689655173 13.271034482758619  25.958482758620686 13.875689655172415  25.271379310344827 14.357241379310343  C 25.278827586206894 14.505689655172413  25.280689655172417 14.654137931034484  25.280689655172417 14.79896551724138  C 25.280689655172417 19.324827586206894  21.740896551724138 24.540431034482758  15.264620689655175 24.540431034482758  C 13.27593103448276 24.540431034482758  11.425034482758624 23.975603448275866  9.868344827586208 23.001637931034484  C 10.142068965517245 23.034224137931037  10.423241379310348 23.046896551724135  10.708137931034484 23.046896551724135  C 12.357931034482762 23.046896551724135  13.87551724137931 22.50198275862069  15.080275862068966 21.582327586206894  C 13.540344827586207 21.55336206896552  12.240620689655172 20.56491379310345  11.791862068965518 19.2071551724138  C 12.006000000000002 19.245172413793107  12.225724137931033 19.26689655172414  12.45289655172414 19.26689655172414  C 12.773172413793104 19.26689655172414  13.086000000000002 19.225258620689655  13.380206896551726 19.147413793103453  C 11.769517241379312 18.83241379310345  10.55544827586207 17.449310344827584  10.55544827586207 15.791034482758624  L 10.55544827586207 15.749396551724136  C 11.030275862068965 16.00465517241379  11.574 16.160344827586208  12.151241379310342 16.178448275862067  C 11.205310344827588 15.562931034482759  10.585241379310343 14.516551724137932  10.585241379310343 13.327155172413793  C 10.585241379310343 12.700775862068967  10.758413793103449 12.110603448275864  11.061931034482757 11.605517241379312  C 12.799241379310343 13.676551724137934  15.391241379310346 15.03793103448276  18.318413793103446 15.184568965517242  C 18.25696551724138 14.93293103448276  18.227172413793102 14.672241379310346  18.227172413793102 14.4025  C 18.227172413793102 12.514310344827585  19.802482758620684 10.979137931034481  21.748344827586205 10.979137931034481  C 22.75944827586207 10.979137931034481  23.675586206896554 11.39551724137931  24.317999999999998 12.061724137931034  C 25.12055172413793 11.906034482758617  25.8728275862069 11.623620689655173  26.552482758620684 11.230775862068965  C 26.28993103448276 12.02913793103448  25.733172413793103 12.700775862068967  25.00510344827586 13.126206896551723  C 25.718275862068968 13.041120689655171  26.39606896551724 12.858275862068965  27.02731034482759 12.584913793103446  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 433 5170 )" />
+                                </g>
+                            </svg>
                         </a>
                     </div>
                 </div>
-                <div class="gallery__item gallery__item--06">
+                <div class="gallery__item--06">
                     <div class="icons__list">
-                        <a href="" class="icons__link icons__link--facebook">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -351 -5169 )">
+                                    <path
+                                        d="M 35.87586206896552 17.500000000000004  C 35.87586206896552 7.901551724137936  27.87268965517241 0.1206896551724139  18 0.1206896551724139  C 8.127310344827587 0.1206896551724139  0.12413793103448341 7.901551724137931  0.12413793103448341 17.5  C 0.12413793103448341 27.098448275862065  8.127310344827587 34.87931034482759  18 34.87931034482759  C 27.87268965517241 34.87931034482759  35.87586206896552 27.098448275862076  35.87586206896552 17.500000000000004  Z M 22.234344827586206 9.268362068965518  L 22.234344827586206 12.13051724137931  L 19.547379310344823 12.13051724137931  C 19.22896551724138 12.13051724137931  18.8751724137931 12.537844827586204  18.8751724137931 13.07913793103448  L 18.8751724137931 14.96551724137931  L 22.23620689655172 14.96551724137931  L 21.727862068965518 17.655689655172413  L 18.87517241379311 17.655689655172413  L 18.87517241379311 25.731637931034484  L 15.704068965517239 25.731637931034484  L 15.704068965517239 17.655689655172413  L 12.827172413793104 17.655689655172413  L 12.827172413793104 14.96551724137931  L 15.704068965517239 14.96551724137931  L 15.704068965517239 13.383275862068965  C 15.704068965517239 11.113103448275861  17.324068965517238 9.268362068965518  19.547379310344823 9.268362068965518  L 22.234344827586206 9.268362068965518  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 351 5169 )" />
+                                </g>
+                            </svg>
                         </a>
-                        <a href="" class="icons__link icons__link--instagram">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -393 -5170 )">
+                                    <path
+                                        d="M 17.500008835588474 0.5203738306929  C 8.130868145012222 0.5203738306929  0.5356789433603382 7.898557626583267  0.5356789433603382 17.00000858314309  C 0.5356789433603382 26.101459539702912  8.130868145012222 33.47964333559328  17.500008835588474 33.47964333559328  C 26.86914952616476 33.47964333559328  34.464338727816646 26.101459539702912  34.464338727816646 17.00000858314309  C 34.46433872804672 7.898519198319174  26.86918908467195 0.5203738304693997  17.500097191703432 0.5203738304693997  Z M 26.282424749618016 20.53883848336981  C 26.267714875954518 21.25087547945144  26.128842613108745 21.955336687732196  25.871711254456393 22.622276306948322  C 25.412802095496758 23.775233330263386  24.474557912331427 24.68667053676682  23.287690388330624 25.132468005470496  C 22.601134897961117 25.382252753875605  21.875954242377986 25.517157237782893  21.142974981705684 25.531446829341753  C 20.20051810030754 25.5732982350985  19.899595627667175 25.583151683377558  17.500008835588474 25.583151683377558  C 15.100422043509774 25.583151683377558  14.799499570869408 25.5732982350985  13.857060360648248 25.53149832820036  C 13.124081099975946 25.517208736641496  12.398900444392815 25.382304252734208  11.712344954023308 25.132519504329032  C 10.525477430022505 24.686722035625422  9.58723324685721 23.775284829121922  9.12832408789754 22.622327805806858  C 8.871192729245188 21.9553881865908  8.73232046639945 21.250926978310044  8.717610592735916 20.538889982228415  C 8.674563605634376 19.62336044029879  8.664420350052993 19.331035752591003  8.664420350052993 17.00000858314309  C 8.664420350052993 14.668981413695244  8.674563605634376 14.37665672598746  8.717592921558932 13.461144350344012  C 8.732302795222466 12.749107354262382  8.871175058068204 12.044646145981627  9.12830641672059 11.377706526765499  C 9.58721143813964 10.224742994129485  10.525456196375202 9.313298995995638  11.71232728284636 8.867497661957145  C 12.398882773215831 8.61771291355197  13.124063428798998 8.482808429644681  13.8570426894713 8.46851883808582  C 14.799499570869408 8.42671893118768  15.100422043509774 8.416865482908621  17.500008835588474 8.416865482908621  C 19.899595627667175 8.416865482908621  20.20051810030754 8.42671893118768  21.1429573105287 8.46851883808582  C 21.875936571201002 8.482808429644681  22.60111722678417 8.61771291355197  23.28767271715364 8.867497661957145  C 24.474540241154443 9.313295130660824  25.412784424319774 10.224732337164255  25.87169358327941 11.377689360479321  C 26.128824941931796 12.044628979695378  26.267697204777534 12.749090187976135  26.282407078441032 13.461127184057833  C 26.325454065542573 14.37665672598746  26.33559732112399 14.668981413695244  26.33559732112399 17.00000858314309  C 26.33559732112399 19.331035752591003  26.325454065542573 19.62336044029879  26.282424749618016 20.538872815942167  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 393 5170 )" />
+                                    <path
+                                        d="M 14.772001612562065 3.8899651720736723  C 14.765292197054265 3.3234787658875575  14.661228452943291 2.7623637697635672  14.46435859497317 2.2311443013017396  C 14.163791038181444 1.4520479252515628  13.547987809795217 0.8362446968653359  12.76889143374504 0.5356771400735738  C 12.237666326214125 0.3388052691618526  11.676545113411514 0.23474149300653838  11.110052695449717 0.22803412248471489  C 10.167916055047606 0.1850448612279365  9.88546624542714 0.1760038943967146  7.500008933761677 0.1760038943967146  C 5.114551622096251 0.1760038943967146  4.832101812475784 0.1850448612279365  3.8899651720736377 0.22801625496128963  C 3.323472754111876 0.23472362548318418  2.762351541309229 0.3387874016384984  2.2311264337783143 0.5356592725502196  C 1.452030057728173 0.8362268293419106  0.8362268293419106 1.4520300577281375  0.5356592725501841 2.2311264337783143  C 0.3387874016384984 2.762351541309229  0.23472362548318418 3.323472754111876  0.22801625496132516 3.8899651720736723  C 0.1850448612279365 4.832101812475784  0.1760038943967146 5.114694562283262  0.1760038943967146 7.500008933761677  C 0.1760038943967146 9.885323305240092  0.18506272875132623 10.16791605504757  0.22801625496132516 11.110052695449752  C 0.23471086355009163 11.676546362958007  0.3387750403265599 12.237669735945715  0.5356592725501841 12.76889143374504  C 0.8362268293419106 13.547987809795217  1.452030057728173 14.163791038181444  2.2311264337783143 14.464358594973206  C 2.762351541309229 14.661230465884856  3.323472754111876 14.76529424204017  3.8899651720736377 14.772001612562065  C 4.831869534671824 14.814883668678505  5.114426549432558 14.82401397312664  7.500008933761677 14.82401397312664  C 9.885591318090832 14.82401397312664  10.168148332851565 14.814955138772063  11.110052695449717 14.772001612562065  C 11.676545113411514 14.76529424204017  12.237666326214125 14.661230465884856  12.76889143374504 14.464358594973206  C 13.547987809795217 14.163791038181444  14.163791038181444 13.547987809795217  14.464358594973206 12.76889143374504  C 14.66124282719683 12.237669735945715  14.765307003973263 11.676546362958007  14.772001612562065 11.110052695449752  C 14.81488366867854 10.167933922570995  14.824013973126675 9.885484112950493  14.824013973126675 7.500008933761677  C 14.824013973126675 5.114533754572861  14.814973006295453 4.832101812475784  14.772001612562065 3.8899651720736723  Z M 7.500008933761677 12.087620634718093  C 4.966340953178161 12.087620634718093  2.912397232805297 10.033676914345193  2.912397232805297 7.500008933761677  C 2.912397232805297 4.966340953178161  4.966340953178161 2.9123972328052616  7.500008933761677 2.9123972328052616  C 10.033676914345193 2.9123972328052616  12.087620634718093 4.966340953178161  12.087620634718093 7.500008933761677  C 12.087620634752874 10.033684913942693  10.033684913942693 12.08762063475291  7.500026801319849 12.08762063475291  Z M 13.340902327291921 2.7311669431431085  C 13.340902327291921 3.32324458400592  12.860928565243093 3.803218346054748  12.268850924380317 3.803218346054748  C 11.676773283517505 3.803218346054748  11.196799521468677 3.32324458400592  11.196799521468677 2.7311669431431085  C 11.196799521468677 2.139089302280297  11.676773283517505 1.6591155402314683  12.268850924380317 1.6591155402314683  C 12.860928565243093 1.6591155402314683  13.340902327291921 2.139089302280297  13.340902327291921 2.7311669431431085  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 404 5179 )" />
+                                </g>
+                            </svg>
                         </a>
-                        <a href="" class="icons__link icons__link--twitter">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <a href="#" class="icons__link">
+                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(1 0 0 1 -433 -5170 )">
+                                    <path
+                                        d="M 35.87586206896552 17.500000000000004  C 35.87586206896552 7.901551724137936  27.87268965517241 0.1206896551724139  18 0.1206896551724139  C 8.127310344827587 0.1206896551724139  0.12413793103448341 7.901551724137931  0.12413793103448341 17.5  C 0.12413793103448341 27.098448275862065  8.127310344827587 34.87931034482759  18 34.87931034482759  C 27.87268965517241 34.87931034482759  35.87586206896552 27.098448275862076  35.87586206896552 17.500000000000004  Z M 27.02731034482759 12.584913793103446  C 26.55620689655173 13.271034482758619  25.958482758620686 13.875689655172415  25.271379310344827 14.357241379310343  C 25.278827586206894 14.505689655172413  25.280689655172417 14.654137931034484  25.280689655172417 14.79896551724138  C 25.280689655172417 19.324827586206894  21.740896551724138 24.540431034482758  15.264620689655175 24.540431034482758  C 13.27593103448276 24.540431034482758  11.425034482758624 23.975603448275866  9.868344827586208 23.001637931034484  C 10.142068965517245 23.034224137931037  10.423241379310348 23.046896551724135  10.708137931034484 23.046896551724135  C 12.357931034482762 23.046896551724135  13.87551724137931 22.50198275862069  15.080275862068966 21.582327586206894  C 13.540344827586207 21.55336206896552  12.240620689655172 20.56491379310345  11.791862068965518 19.2071551724138  C 12.006000000000002 19.245172413793107  12.225724137931033 19.26689655172414  12.45289655172414 19.26689655172414  C 12.773172413793104 19.26689655172414  13.086000000000002 19.225258620689655  13.380206896551726 19.147413793103453  C 11.769517241379312 18.83241379310345  10.55544827586207 17.449310344827584  10.55544827586207 15.791034482758624  L 10.55544827586207 15.749396551724136  C 11.030275862068965 16.00465517241379  11.574 16.160344827586208  12.151241379310342 16.178448275862067  C 11.205310344827588 15.562931034482759  10.585241379310343 14.516551724137932  10.585241379310343 13.327155172413793  C 10.585241379310343 12.700775862068967  10.758413793103449 12.110603448275864  11.061931034482757 11.605517241379312  C 12.799241379310343 13.676551724137934  15.391241379310346 15.03793103448276  18.318413793103446 15.184568965517242  C 18.25696551724138 14.93293103448276  18.227172413793102 14.672241379310346  18.227172413793102 14.4025  C 18.227172413793102 12.514310344827585  19.802482758620684 10.979137931034481  21.748344827586205 10.979137931034481  C 22.75944827586207 10.979137931034481  23.675586206896554 11.39551724137931  24.317999999999998 12.061724137931034  C 25.12055172413793 11.906034482758617  25.8728275862069 11.623620689655173  26.552482758620684 11.230775862068965  C 26.28993103448276 12.02913793103448  25.733172413793103 12.700775862068967  25.00510344827586 13.126206896551723  C 25.718275862068968 13.041120689655171  26.39606896551724 12.858275862068965  27.02731034482759 12.584913793103446  Z "
+                                        fill-rule="nonzero" fill="#ffffff" stroke="none"
+                                        transform="matrix(1 0 0 1 433 5170 )" />
+                                </g>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -340,28 +508,33 @@
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__logo">
-                <a class="footer__logo--link" href="#">
-                    <img src="./imgs/dealer-logo.svg" class="footer__logo--img" alt="Royal Enfield">
+                <a class="logo-link" href="#">
+                    <img src="./imgs/dealer-logo.svg" alt="Royal Enfield">
                 </a>
                 <h3 class="footer__slogan">Duluth Motorcycles</h3>
             </div>
             <div class="footer__navigation">
-                <ul class="quick-links__list">
+                <ul class="quick-links">
                     <li class="quick-links__item"><a href="#"
-                            class="quick-links__link  "> New Inventory </a></li>
+                            class="quick-links__link  "> New Inventory </a>
+                    </li>
                     <li class="quick-links__item"><a href="#"
-                            class="quick-links__link  "> Pre-Owned Inventory </a></li>
+                            class="quick-links__link  "> Pre-Owned Inventory </a>
+                    </li>
                     <li class="quick-links__item"><a href="#"
-                            class="quick-links__link  "> Promotions </a></li>
+                            class="quick-links__link  "> Promotions </a>
+                    </li>
                     <li class="quick-links__item"><a href="#"
-                            class="quick-links__link  "> Accessories </a></li>
+                            class="quick-links__link  "> Accessories </a>
+                    </li>
                     <li class="quick-links__item"><a href="#"
-                            class="quick-links__link quick-links__link--button "> Contact Us </a></li>
+                            class="quick-links__link quick-links__link--button "> Contact Us </a>
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="footer__copyright">
-            <p class="footer__text">120 W 2nd Street | Duluth, MN 55802 © Dealership Powered by Leadventure</p>
+            <p>120 W 2nd Street | Duluth, MN 55802 © Dealership Powered by LeadVenture</p>
         </div>
     </footer>
 

@@ -1,25 +1,26 @@
 ## R&D Assessment Project
 
-This project was created to do the R&D Assessment.
+This project was created to R&D Assessment test.
 
 You can clone the project on your computer.
 
 Requirements:
 - NodeJS
+- NPM
 
 Steps to use the project
 1. Open the console on the project route
 2. Download **npm** packages 
 `npm install`
-3. Start **gulp**
-`gulp` or  `gulp watch`
+1. Start **gulp** executed in console
+`gulp` or  `gulp start`
 
-This creates a server and will be waiting for changes in the files:
-*/scripts/script.js*
-*/scss/styles.scss*
+This creates a */app* folder and a server also will be waiting for changes in the following files:
+*/src/script.js*,
+*/src/style.scss*,
 */src/index.handlebars*
 
-Handlebas data is obtained from the **data.json** file (*/src/data.json*)
+Handlebar data is obtained from the **data.json** file (*/src/data.json*)
 
 
 Page URL: [https://shenshodev.github.io/rnd_assessment-page/]

@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-    $('.promotions__slider').slick({
+    $('.promotions-slider').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -20,36 +20,43 @@ $(document).ready(function () {
     });
 
     $('.logos-slider').slick({
+        draggable: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         adaptiveHeight: true,
-        asNavFor: '.to-navigator',
+        asNavFor: '.navigator',
         fade: true
     });
 
     $('.motorcycles-slider').slick({
+        draggable: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        asNavFor: '.to-navigator',
+        asNavFor: '.navigator',
         adaptiveHeight: true
     });
+
     $('.youtube-slider').slick({
+        draggable: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         adaptiveHeight: true,
-        asNavFor: '.to-navigator',
+        asNavFor: '.navigator',
         fade: true
     });
 
     $('.navigator').slick({
+        slidesToScroll: 1,
         slidesToShow: 4,
         arrows: false,
         adaptiveHeight: true,
+        centerMode: true,
         focusOnSelect: true,
         asNavFor: '.to-navigator',
-        vertical: true
+        vertical: true,
+        centerMode: true
     });
 });
