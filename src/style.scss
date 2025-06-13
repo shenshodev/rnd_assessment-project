@@ -1,7 +1,40 @@
-// ========== MIXINS AND FUNCTIONS ==========
+// ========== VARIABLES ==========
 
-$phone-width: 767px;
-$tablet-width: 1023px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@100;300;400;500;900&display=swap');
+
+
+// Theme colors
+$color-primary: #da291c;
+$color-secondary: #fff;
+$color-tertiary: #000;
+$support-color: #d0d0d0;
+$page-text-color: #fff;
+
+$white                  :	#fff;
+$black                  :	#000;
+
+
+// Fonts
+$site-font-family       :   'Roboto', Arial, Helvetica, sans-serif;
+$headings-font-family   :   'Roboto', "Times New Roman", Times, serif;
+
+
+// Screen
+$screen-xs              :   320px;
+$screen-sm              :   768px;
+$screen-md              :   992px;
+$screen-lg              :   1200px;
+$screen-xl              :   1530px;
+$screen-xxl             :   1780px;
+
+// Container widths
+$container-sm           :   750px;
+$container-md           :   970px;
+$container-lg           :   1170px;
+$container-xl           :   1500px;
+$container-xxl          :   1750px;
+
+// ========== MIXINS AND FUNCTIONS ==========
 
 @function responsive-px($min-px, $max-px, $min-vw, $max-vw) {
     @return calc(#{$min-px}px + (#{$max-px} - #{$min-px}) * ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})));
@@ -17,6 +50,15 @@ $tablet-width: 1023px;
     @return #{$vw-result}vw;
 }
 
+@function rem($value) {
+    $remValue: calc($value / 16) + rem; 
+    @return $remValue;
+}
+
+@function em($value) {
+    $emValue: calc($value / 16) + em; 
+    @return $emValue;
+}
 
 @mixin custom-mq($min-width: 320, $max-width: 1920) {
     @media only screen and (min-width: #{$min-width}px) and (max-width: #{$max-width}px) {
@@ -24,151 +66,175 @@ $tablet-width: 1023px;
     }
 }
 
-@mixin phone {
-    @media only screen and (max-width: #{$phone-width}) {
+@mixin min-xs {
+    @media(min-width: $screen-xs) {
         @content;
     }
 }
 
-@mixin tablet {
-    @media only screen and (min-width: #{$phone-width + 1px}) and (max-width: #{$tablet-width}) {
+@mixin max-xs {
+    @media(max-width: ($screen-sm - 1px)) {
         @content;
     }
 }
 
-@mixin tablet-phone {
-    @media only screen and (max-width: #{$tablet-width}) {
+@mixin min-sm {
+    @media(min-width: $screen-sm) {
         @content;
     }
 }
 
-@mixin tablet-desktop {
-    @media only screen and (min-width: #{$phone-width + 1px}) {
+@mixin min-md {
+    @media(min-width: $screen-md ) {
         @content;
     }
 }
 
-@mixin desktop {
-    @media only screen and (min-width: #{$tablet-width + 1px}) {
+@mixin min-lg {
+    @media(min-width: $screen-lg) {
         @content;
     }
 }
 
-@mixin container {
-    width: 100%;
-
-    @media (min-width: 768px) {
-        max-width: 750px;
-        margin: 0 auto;
-    }
-
-    @media (min-width: 992px) {
-        // MD
-        max-width: 970px;
-    }
-
-    @media (min-width: 1200px) {
-        // LG
-        max-width: 1440px;
+@mixin min-xl {
+    @media(min-width: $screen-xl) {
+        @content;
     }
 }
 
-// ========== VARIABLES ==========
+@mixin min-xxl {
+    @media(min-width: $screen-xxl) {
+        @content;
+    }
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@100;300;400;500;900&display=swap');
+@mixin custom-mq($min-width: 320, $max-width: 1920) {
+    @media only screen and (min-width: #{$min-width}px) and (max-width: #{$max-width}px) {
+        @content;
+    }
+}
 
-
-$font-primary: 'Roboto',
-sans-serif;
-
-$color-primary: #da291c;
-$color-secondary: #fff;
-$color-tertiary: #000;
-$support-color: #d0d0d0;
-$page-text-color: #fff;
-
+@mixin container() {
+    padding-inline: 15px;
+    margin-inline: auto;
+    @media (min-width: $screen-sm) { width: $container-sm; }
+    @media (min-width: $screen-md) { width: $container-md; }
+    @media (min-width: $screen-lg) { width: $container-lg; }
+    @media (min-width: $screen-xl) { width: $container-xl; }
+    @media (min-width: $screen-xxl) { width: $container-xxl; }
+}
 
 // ========== GENERAL ==========
 
 html{
     scroll-behavior: smooth;
+    font-size: 16px;
+    @include min-sm{
+        font-size: 12px;
+    }
+
+    @include min-md{
+        font-size: 13px;
+    }
+
+    @include min-lg{
+        font-size: 14px;
+    }
+
+    @include min-xl{
+        font-size: 15px;
+    }
+
+    @include min-xxl{
+        font-size: 16px;
+    }
 }
 
 body {
     background-image: url(../imgs/bg-page.png);
     background-attachment: fixed;
-    font-family: $font-primary;
+    font-family: $site-font-family;
     font-size: responsive-px(12, 16, 768, 1920);
 }
 
+a {
+    &:hover, &:active, &:focus, &:visited {
+        text-decoration: none;
+    }
+}
+
 %space-section{
-    padding: responsive-px(40, 60, 768, 1920) 0px;
-    @include phone {
-        padding: responsive-px(20, 40, 320, 767) 0px;
+    padding: em(40) em(0);
+    @include min-sm{
+        padding: em(60) em(0);
+    }
+}
+
+%section-title{
+    font-size: em(24);
+    letter-spacing: 0.2em;
+    color: $color-secondary;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    padding-bottom: rem(10);
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: rem(30);
+        height: rem(4);
+        background-color: $color-primary;
+    }
+}
+
+%site-button{
+    &:visited,
+    &:focus,
+    & {
+        display: inline-block;
+        color: $color-secondary;
+        background-color: transparent;
+        border: rem(2) solid $color-secondary;
+        text-decoration: none !important;
+        transition: .3s;
+        text-align: center;
+        padding: rem(10) rem(30) !important;
+    }
+
+    &:hover {
+        background-color: $color-primary !important;
+        border: rem(2) solid $color-primary !important;
+        color: $color-secondary !important;
     }
 }
 
 .container{
     width: 90%;
     margin: 0 auto;
-    padding: 0px 15px;
-}
-
-.page {
-    &__title {
-        font-size: responsive-px(16, 24, 768, 1920);
-        @include phone {
-            font-size: responsive-px(16, 24, 320, 767);
-        }
-        letter-spacing: 0.2em;
-        color: $color-secondary;
-        text-transform: uppercase;
-        font-weight: 900;
-        text-align: center;
-        margin: 0px;
-        padding-bottom: 10px;
-        position: relative;
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 30px;
-            height: 4px;
-            background-color: $color-primary;
-        }
-    }
-    &__button{
-        &:visited,
-        &:focus,
-        & {
-            display: inline-block;
-            color: $color-secondary;
-            background-color: transparent;
-            border: 2px solid $color-secondary;
-            text-decoration: none !important;
-            transition: .3s;
-            text-align: center;
-            padding: responsive-px(5, 10, 768, 1920) responsive-px(15, 30, 768, 1920);
-            @include phone {
-                padding: responsive-px(5, 10, 320, 767) responsive-px(15, 30, 320, 767);
-            }
-        }
-    
-        &:hover {
-            background-color: $color-primary;
-            border: 2px solid $color-primary;
-            color: $color-secondary;
-        }
-    }
+    padding: rem(0) rem(15);
 }
 
 // ========== SECTIONS ==========
 
 .header {
+    font-size: 16px;
+    @include min-sm{
+        font-size: 10px;
+    }
+    @include min-md{
+        font-size: 12px;
+    }
+    @include min-xxl{
+        font-size: 16px;
+    }
+    
     background-color: $color-tertiary;
     position: fixed;
     top: 0;
@@ -177,11 +243,7 @@ body {
     z-index: 10;
 
     .container {
-        @include tablet {
-            padding: 0px 15px;
-        }
-
-        @include desktop {
+        @include min-sm{
             width: 94%;
             margin: 0 auto;
         }
@@ -189,18 +251,14 @@ body {
 
     .site-logo {
         img {
-            width: responsive-px(140, 332, 768, 1920);
+            width: em(332);
             height: auto;
-
-            @include phone {
-                width: responsive-px(180, 332, 320, 767);
-            }
         }
     }
 
     .slogan {
-        margin: 0px;
-        margin-left: 30px;
+        margin: 0;
+        margin-left: rem(30);
 
         @include custom-mq(768, 1200) {
             margin-left: 0px;
@@ -209,25 +267,26 @@ body {
         font-weight: 900;
         text-transform: uppercase;
         color: $page-text-color;
-        font-size: responsive-px(10, 20, 768, 1920);
 
-        @include phone {
-            font-size: responsive-px(16, 20, 320, 767);
-            margin: 0px;
+        font-size: em(20);
+
+        @include max-xs{
+            font-size: em(20);
+            margin: 0;
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            padding: 10px;
+            padding: rem(10);
             border-bottom: 1px solid $color-secondary;
             text-align: center;
         }
     }
 
     .navbar {
-        margin-bottom: 0px;
+        margin-bottom: 0;
 
-        @include tablet-desktop {
+        @include min-sm{
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -240,91 +299,102 @@ body {
 
         .navbar-collapse {
             box-shadow: none;
+            flex-basis: 100%;
+            @include min-lg{
+                flex-basis: 50%;
+            }
+            .nav {
+                padding: rem(0) rem(0) rem(20) rem(0);
+                @include min-sm{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                
+                li {
+                    @include max-xs{
+                        text-align: center
+                    }
+                }
+
+                a {
+                    &:visited,
+                    &:focus,
+                    & {
+                        color: $page-text-color;
+                        background-color: transparent;
+                        text-decoration: none;
+                        transition: .3s;
+                        padding: 0;
+                        font-size: em(18);
+                        @include max-xs{
+                            padding: rem(20) rem(0);
+                        }
+                    }
+
+                    &.header__button {
+                        margin: 0px;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                        &:hover{
+                            background-color: $color-primary;
+                            color: $color-secondary;
+                        }
+                    }
+
+                    &:hover {
+                        color: $color-primary;
+                        background-color: transparent;
+                    }
+                }
+            }
         }
     }
 
     .navbar-header {
         display: flex;
         align-items: center;
-        padding: 30px 0px;
+        padding: rem(30) rem(0);
 
         @include custom-mq(768, 1200) {
             flex-direction: column;
         }
 
-        @include phone {
+        @include max-xs{
             justify-content: center;
-            padding: 60px 30px 30px 30px;
+            padding: rem(60) rem(30) rem(30) rem(30);
         }
 
         .navbar-toggle {
             float: none;
-
             span {
                 background-color: $color-secondary;
             }
         }
     }
 
-    .nav {
-        @include tablet-desktop {
-            display: flex;
-            align-items: center;
-        }
-        
-        li {
-            @include phone {
-                text-align: center
-            }
-        }
-
-        a {
-            &:visited,
-            &:focus,
-            & {
-                color: $page-text-color;
-                background-color: transparent;
-                text-decoration: none;
-                transition: .3s;
-                padding: 0px;
-                margin-right: responsive-px(15, 60, 768, 1920);
-                font-size: responsive-px(10, 18, 768, 1920);
-                @include phone {
-                    padding: responsive-px(15, 30, 768, 1920) 0px;
-                    font-size: responsive-px(12, 18, 320, 767);
-                }
-            }
-
-
-
-            &.page__button {
-                margin: 0px;
-                padding: 10px 30px;
-                @include phone {
-                    padding-left: 30px;
-                    padding-right: 30px;
-                }
-                &:hover{
-                    background-color: $color-primary;
-                    color: $color-secondary;
-                }
-            }
-
-            &:hover {
-                color: $color-primary;
-                background-color: transparent;
-            }
-        }
+    &__button{
+        @extend %site-button;
     }
 }
 
 .hero {
-    background-image: url(../imgs/bg-hero.png);
+    font-size: 16px;
+    background-image: url(../imgs/bg-hero-xs.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    @include phone {
-        background-image: url(../imgs/bg-hero-xs.jpg);
+    @include min-sm{
+        background-image: url(../imgs/bg-hero.png);
+        font-size: 12px;
+    }
+
+    @include min-md{
+        font-size: 14px;
+    }
+
+    @include min-lg{
+        font-size: 16px;
     }
 
     position: relative;
@@ -353,48 +423,37 @@ body {
     .container {
         position: relative;
         z-index: 2;
-        padding-top: responsive-px(140, 240, 768, 1920);
-        padding-bottom: responsive-px(80, 120, 768, 1920);
-
-        @include phone {
-            padding-top: responsive-px(200, 240, 320, 767);
-            padding-bottom: responsive-px(80, 120, 320, 767);
-        }
+        padding-top: em(240);
+        padding-bottom: em(120);
     }
 
     &__logo {
         position: relative;
-
         span{
             display: inline-block;
-            width: 30px;
-            height: 4px;
-            margin-right: 10px;
+            width: em(30);
+            height: rem(4);
+            margin-right: rem(10);
             background-color: $color-primary;
             vertical-align: middle;
         }
 
         img {
-            width: responsive-px(100, 200, 768, 1920);
             height: auto;
-
-            @include phone {
-                width: responsive-px(100, 200, 320, 767);
-            }
+            width: em(200);
         }
     }
 
     &__title {
         color: $page-text-color;
-        font-weight: 100;
         text-transform: uppercase;
-        margin: 1% 0% 2% 0%;
-        font-size: responsive-px(42, 84, 768, 1920);
-
-        @include phone {
-            font-weight: 300;
-            width: responsive-px(100, 200, 320, 767);
-            margin-bottom: 30%;
+        font-size: em(36);
+        font-weight: 300;
+        margin-bottom: 10%;
+        @include min-sm{
+            font-size: em(84);
+            font-weight: 100;
+            margin: 1% 0% 2% 0%;
         }
 
         span {
@@ -404,16 +463,15 @@ body {
 
     &__buttons {
         .page__button {
-            font-size: responsive-px(12, 18, 768, 1920);
+            font-size: em(18);
 
-            @include tablet-desktop {
+            @include min-sm{
                 &:nth-of-type(1) {
                     margin-right: 1%;
                 }
             }
 
-            @include phone {
-                font-size: responsive-px(12, 18, 320, 767);
+            @include max-xs{
                 display: block;
                 width: 80%;
                 margin: 0 auto 10px auto;
@@ -421,23 +479,30 @@ body {
         }
     }
 
+    &__button{
+        @extend %site-button;
+    }
+
     &__scroll {
+        display: none;
         text-align: center;
         margin-top: 2%;
-        @include phone{
-            display: none;
+
+        @include min-md{
+            display: block;
         }
+
         a{
             &:active, &:focus, &{
                 text-decoration: none;
                 display: inline-block;
                 color: $page-text-color;
-                font-size: responsive-px(30, 50, 768, 1920);
+                font-size: em(50);
                 background-color: rgba($color-tertiary, 0.6);
-                height: responsive-px(50, 70, 768, 1920);
-                width: responsive-px(50, 70, 768, 1920);
-                line-height: responsive-px(50, 70, 768, 1920);
-                border-radius: 50px;
+                height: rem(70);
+                width: rem(70);
+                line-height: rem(70);
+                border-radius: rem(50);
                 transition: .3s;
             }
             &:hover{
@@ -449,38 +514,46 @@ body {
 }
 
 .ctas {
-    padding: 15px;
+    padding: rem(15);
     background-color: $color-tertiary;
+    font-size: 16px;
+
+    @include min-sm{
+        font-size: 12px;
+    }
+
+    @include min-md{
+        font-size: 14px;
+    }
+
+    @include min-lg{
+        font-size: 16px;
+    }
 
     &__list {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 15px;
-        @include phone{
-            grid-template-columns: 1fr;
-            row-gap: 15px;
+        grid-template-columns: 1fr;
+        row-gap: rem(15);
+
+        @include min-sm{
+            grid-template-columns: 1fr 1fr;
+            column-gap: rem(15);
         }
     }
 
     &__link {
-
         &:visited,
         :active,
         & {
             flex-grow: 1;
-
-            @include phone {
-                flex-basis: 100%;
-            }
-
+            flex-basis: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             text-decoration: none !important;
-            height: responsive-px(300, 600, 768, 1920);
-
-            @include phone {
-                height: responsive-px(240, 600, 320, 767);
+            height: em(300);
+            @include min-sm{
+                height: em(600);
             }
         }
 
@@ -500,7 +573,6 @@ body {
 
         position: relative;
         z-index: 1;
-
         &::before {
             content: '';
             position: absolute;
@@ -547,17 +619,16 @@ body {
 
         &::before {
             content: '';
-            background: #000;
+            background: $black;
             position: absolute;
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
             z-index: -1;
-            filter: blur(responsive-px(50, 100, 768, 1920));
-
-            @include phone {
-                filter: blur(responsive-px(50, 100, 320, 767));
+            filter: blur(rem(50));
+            @include min-sm{
+                filter: blur(rem(100));
             }
         }
 
@@ -579,28 +650,32 @@ body {
 
 .video {
     @extend %space-section;
-    .page__title {
+    .video__title {
+        @extend %section-title;
         margin-bottom: 3%;
     }
 }
 
 .promotions{
     @extend %space-section;
-    .page__title{
+
+    .promotions__title{
+        @extend %section-title;
         margin-bottom: 6%;
     }
+
     .slider{
         button{
             &.slick-arrow{
                 position: absolute;
                 z-index: 5;
                 bottom: 10%;
-                width: 50px;
-                height: 50px;
+                width: rem(50);
+                height: rem(50);
                 background-color: $color-secondary;
                 border: none;
-                border-radius: 50px;
-                font-size: 40px;
+                border-radius: rem(50);
+                font-size: em(40);
                 transition: .3s;
                 &:hover{
                     background-color: $color-primary;
@@ -625,18 +700,38 @@ body {
 }
 
 .lineup{
-    padding: 8px 0px;
-    background-color: $color-tertiary;
+    font-size: 16px;
+    @include min-sm{
+        font-size: 10px;
+    }
+    @include min-md{
+        font-size: 12px;
+    }
+    @include min-lg{
+        font-size: 14px;
+    }
+    @include min-xl{
+        font-size: 16px;
+    }
+    @include min-xxl{
+        font-size: 16px;
+    }
+    
+    border-top: rem(8) solid $color-tertiary;
+    border-bottom: rem(8) solid $color-tertiary;
+
     &__container{
         background-image: url(../imgs/bg-lineup.jpg);
         background-position: center;
         background-size: cover;
         position: relative;
         z-index: 1;
-        padding: 100px 0px;
-        @include phone{
-            padding: responsive-px(40, 100, 768, 1920) 0px;
+        padding: em(40) em(0);
+
+        @include min-sm{
+            padding: em(100) em(0);
         }
+
         &::before{
             content: '';
             position: absolute;
@@ -650,13 +745,29 @@ body {
         }
     }
     
+    &__title{
+        @extend %section-title;
+    }
+
     .logos-slider{
         margin: 2% auto 0 auto;
         &__item{
             img{
-                width: responsive-px(150, 300, 768, 1920);
                 height: auto;
                 margin: 0 auto;
+                width: em(140);
+                @include min-sm{
+                    width: em(180);
+                }
+                @include min-md{
+                    width: em(200);
+                }
+                @include min-lg{
+                    width: em(260);
+                }
+                @include min-xl{
+                    width: em(300);
+                }
             }
         }
     }
@@ -665,34 +776,57 @@ body {
         margin: 0 auto 0 auto;
         &__item{
             img{
-                width: responsive-px(320, 800, 768, 1920);
                 height: auto;
                 margin: 0 auto;
+                max-width: em(400);
+                @include min-sm{
+                    max-width: em(350);
+                }
+                @include min-md{
+                    max-width: em(400);
+                }
+                @include min-lg{
+                    max-width: em(500);
+                }
+                @include min-xl{
+                    max-width: em(800);
+                }
             }
         }
     }
 
-    &__button{
+    &__button-container{
         text-align: center;
-        .page__button{
-            font-size: responsive-px(16, 20, 768, 1920);
-            padding: 10px 80px;
-        }
+    }
+
+    &__button{
+        @extend %site-button;
+        font-size: em(20);
+        padding: rem(10) rem(80);
     }
     
     .youtube-slider{
-        @include phone{
+        @include max-xs{
             display: none;
         }
+
         position: absolute;
-        top: responsive-px(60, 170, 768, 1920);
-        left: responsive-px(20, 110, 768, 1920);
-        width: responsive-px(200, 300, 768, 1920);
+        left: em(110);
+        width: em(300);
+        top: em(110);
+        @include min-lg{
+            top: em(160);
+        }
+
+        @include min-xl{
+            top: em(300);
+        }
+
         .preview{
             display: flex;
             justify-content: center;
             align-items: center;
-            height: responsive-px(100, 160, 768, 1920);
+            height: em(160);
             i.fa{
                 color: $color-secondary;
                 font-size: 50px;
@@ -708,28 +842,28 @@ body {
 
         &__item{
             .content{
-                padding: responsive-px(10, 20, 768, 1920) responsive-px(20, 40, 768, 1920);
+                padding: rem(20) rem(40);
                 background-color: $color-tertiary;
 
                 &__model{
                     text-transform: uppercase;
                     color: $color-primary;
-                    font-size: responsive-px(12, 14, 768, 1920);
-                    margin: 0px;
-                    margin-bottom: 5px;
+                    font-size: em(14);
+                    margin: 0;
+                    margin-bottom: rem(5);
                 }
                 &__title{
-                    margin: 0px;
+                    margin: 0;
                     margin-bottom: 12%;
                     color: $color-secondary;
                     font-weight: 300;
-                    font-size: responsive-px(16, 28, 768, 1920);
+                    font-size: em(28);
                 }
                 &__text{
                     color: $support-color;
-                    margin: 0px;
+                    margin: 0;
                     margin-bottom: 20%;
-                    font-size: responsive-px(10, 12, 768, 1920);
+                    font-size: em(12);
                 }
                 &__link{
                     &:visited, &:focus, &{
@@ -749,16 +883,16 @@ body {
     }
 
     .navigator{
-        @include phone{
+        @include max-xs{
             display: none;
         }
         position: absolute;
-        height: responsive-px(240, 400, 768, 1920);
         right: 2%;
         top: 0;
         bottom: 0;
         margin: auto;
-        width: responsive-px(200, 300, 768, 1920);
+        height: em(400);
+        width: em(300);
         &__item{
             display: flex;
             justify-content: space-between;
@@ -783,13 +917,13 @@ body {
             h4{
                 color: $support-color;
                 transition: .3s;
-                font-size: responsive-px(10, 12, 768, 1920);
+                font-size: em(12);
                 width: 120px;
                 transition: .3s;
     
             }
             img{
-                width: responsive-px(80, 140, 768, 1920);
+                width: em(140);
                 height: auto;
                 margin: 0 auto;
                 transition: .3s;
@@ -797,7 +931,8 @@ body {
             }
             i{
                 color: $color-primary;
-                font-size: 30px;
+                // font-size: 30px;
+                font-size: em(30);
                 transition: .3s;
                 opacity: 0;
             }
@@ -807,14 +942,29 @@ body {
 }
 
 .social {
+    font-size: 16px;
+
+    @include min-sm{
+        font-size: 12px;
+    }
+    @include min-md{
+        font-size: 14px;
+    }
+    @include min-lg{
+        font-size: 16px;
+    }
+   
+
     @extend %space-section;
     background-color: rgba($color-tertiary, 0.5);
-    .page__title {
+
+    &__title {
+        @extend %section-title;
         margin-bottom: 3%;
     }
 
-    &__title {
-        font-size: responsive-px(24, 48, 768, 1920);
+    &__sub-title {
+        font-size: em(48);
         font-weight: 300;
         color: $page-text-color;
         text-align: center;
@@ -823,30 +973,32 @@ body {
         margin-bottom: 1%;
     }
 
-    &__sub-title {
-        font-size: responsive-px(14, 20, 768, 1920);
+    &__hash {
+        font-size: em(20);
         color: $support-color;
         font-weight: 600;
         font-style: italic;
         text-align: center;
         letter-spacing: 0.1em;
-        margin: 0px;
+        margin: 0;
         margin-bottom: 4%;
     }
 
     .gallery{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        @include phone{
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        @include min-sm{
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
         }
+
         &__item{
-            height: responsive-px(220, 500, 768, 1920);
-            @include phone{
-                height: responsive-px(120, 300, 320, 767);
+            height: em(300);
+            @include min-sm{
+                height: em(500);
             }
+
             @for $i from 1 to 7{
                 &--0#{$i}{
                     background-image: url(../imgs/img-social-0#{$i}.jpg);
@@ -855,6 +1007,7 @@ body {
                     @extend .gallery__item;
                 }
             }
+
             position: relative;
             &::before{
                 content: '';
@@ -867,6 +1020,7 @@ body {
                 transition: .3s;
                 opacity: 1;
             }
+
             &:hover{
                 &::before{
                     opacity: 0;
@@ -890,25 +1044,29 @@ body {
             opacity: 0;
             transition: .6s;
         }
+
         &__link{
             &:active, &:focus, &{
                 display: inline-block;
                 text-decoration: none !important;
-                border-radius: 50px;
-                height: 35px;
-                width: 36px;
-                line-height: 35px;
-                font-size: 20px;
-                @include phone{
-                    height: 30px;
-                    width: 30px;
-                    line-height: 30px;
-                    font-size: 16px;
+                border-radius: rem(50);
+                height: em(30);
+                width: em(30);
+                line-height: em(30);
+                font-size: rem(16);
+
+                @include min-sm{
+                    height: em(35);
+                    width: em(35);
+                    line-height: em(35);
+                    font-size: rem(20);
                 }
+
                 svg{
                     transition: .3s;
-                    width: 36px;
-                    height: 35px;
+                    width: em(35);
+                    height: em(35);
+                    font-size: rem(35);
                 }
 
             }
@@ -922,10 +1080,21 @@ body {
 }
 
 .footer {
+    font-size: 16px;
+    @include min-sm{
+        font-size: 10px;
+    }
+    @include min-md{
+        font-size: 14px;
+    }
+    @include min-xl{
+        font-size: 16px;
+    }
+    
     background-color: $color-tertiary;
     color: $page-text-color;
 
-    @include tablet-desktop {
+    @include min-sm{
         text-align: center;
     }
 
@@ -935,7 +1104,11 @@ body {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 60px 0px;
+        padding: em(60) em(0);
+        @include min-sm{
+            flex-wrap: nowrap;
+            gap: rem(30);
+        }
     }
 
     &__logo {
@@ -949,49 +1122,47 @@ body {
 
         .logo-link{
             img{
-                width: responsive-px(160, 264, 768, 1920);
                 height: auto;
-    
-                @include phone {
-                    width: responsive-px(280, 264, 320, 767);
-                }
+                width: em(264);
             }
         }
     }
 
     &__slogan {
         color: $page-text-color;
-        margin: 0px;
-        margin-left: 30px;
-
-        @include custom-mq(320, 1200) {
-            margin-left: 0px;
-        }
-
+        margin: 0;
+        margin-left: rem(20);
         font-weight: 900;
         text-transform: uppercase;
-        font-size: responsive-px(10, 20, 768, 1920);
-
-        @include phone {
-            font-size: responsive-px(16, 20, 320, 767);
-            margin: 20% 0%;
+        font-size: em(20);
+        @include custom-mq(320, 1200) {
+            margin-left: 0;
+            margin-bottom: rem(20);
         }
     }
 
     &__navigation {
+        flex-basis: 100%;
+        @include min-lg{
+            flex-basis: 50%;
+        }
         .quick-links {
             display: flex;
+            flex-wrap: wrap;
             list-style: none;
-            margin: 0px;
-            padding: 0px;
+            margin: 0;
+            padding: 0;
 
-            @include phone {
-                flex-wrap: wrap;
+            @include min-sm{
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
             }
 
             &__item {
-                @include phone {
-                    flex-basis: 100%;
+                flex-basis: 100%;
+                @include min-sm{
+                    flex-basis: auto;
                 }
             }
 
@@ -1004,20 +1175,16 @@ body {
                     background-color: transparent;
                     text-decoration: none;
                     transition: .3s;
-                    padding: responsive-px(5, 10, 768, 1920) responsive-px(15, 30, 768, 1920);
-                    font-size: responsive-px(12, 18, 768, 1920);
+                    padding: rem(10) rem(0);
+                    font-size: em(18);
 
-                    @include phone {
-                        padding: responsive-px(15, 30, 768, 1920) 0px;
-                        font-size: responsive-px(16, 18, 320, 767);
+                    @include min-sm{
+                        font-size: em(18);
                     }
                 }
 
-                .page__button{
-                    @include phone {
-                        padding-left: 30px;
-                        padding-right: 30px;
-                    }
+                &--button{
+                    @extend %site-button;
                 }
 
                 &:hover {
@@ -1030,16 +1197,13 @@ body {
 
     &__copyright {
         border-top: 1px solid $support-color;
-
-        @include phone {
-            text-align: center;
-        }
+        text-align: center;
 
         p{
-            font-size: 14px;
+            font-size: em(14);
             color: $support-color;
-            margin: 0px;
-            padding: 26px 0px;
+            margin: 0;
+            padding: rem(26) rem(0);
         }
     }
 }
